@@ -1,15 +1,15 @@
 import { AppTheme } from "./theme";
 
 export const DarkTheme: AppTheme = {
-	primary: "#000",
-	primaryText: "#000",
-	primaryHighlight: "#000",
-	secondary: "#000",
-	text: "#FFF",
-	background: "#000",
-	light: "#000",
-	dark: "#000",
-	lightDark: "#000",
-	darkLight: "#000",
+	primary: "#FAFAFA",
+	secondary: "#DDDDDD",
+	primaryText: "#206E8C",
+	primaryHighlight: "#F00",
+	text: "#FAFAFA",
+	background1: "#206E8C",
+	background2: "#191E2D",
+	light: "#EEEEEE",
+	dark: "#111111",
+	gray: "#666666",
 };
 

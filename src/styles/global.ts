@@ -18,7 +18,9 @@ export default createGlobalStyle<{ theme: AppTheme }>`
     }
 
     body {
-        background-color: ${(props) => props.theme.background};
+        background-image: linear-gradient(135deg, ${(props) =>
+					`${props.theme.background1}, ${props.theme.background2}`});
+        background-attachment: fixed;
         color: ${(props) => props.theme.text};
         transition: background 0.25s ease, color 0.25s ease;
     }

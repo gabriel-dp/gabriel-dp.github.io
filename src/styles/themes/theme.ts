@@ -4,14 +4,14 @@ export type HexColor = `#${string}`;
 
 export interface AppTheme extends DefaultTheme {
 	primary: HexColor;
+	secondary: HexColor;
 	primaryText: HexColor;
 	primaryHighlight: HexColor;
-	secondary: HexColor;
 	text: HexColor;
-	background: HexColor;
+	background1: HexColor;
+	background2: HexColor;
 	light: HexColor;
 	dark: HexColor;
-	lightDark: HexColor;
-	darkLight: HexColor;
+	gray: HexColor;
 }
 
