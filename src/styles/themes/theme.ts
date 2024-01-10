@@ -3,6 +3,7 @@ import { DefaultTheme } from "styled-components";
 export type HexColor = `#${string}`;
 
 export interface AppTheme extends DefaultTheme {
+	logo: string;
 	primary: HexColor;
 	secondary: HexColor;
 	primaryText: HexColor;

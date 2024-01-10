@@ -1,6 +1,7 @@
 import { AppTheme } from "./theme";
 
 export const LightTheme: AppTheme = {
+	logo: "./logo-gradient.svg",
 	primary: "#206E8C",
 	secondary: "#191E2D",
 	primaryText: "#EEEEEE",

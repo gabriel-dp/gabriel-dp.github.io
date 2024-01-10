@@ -1,10 +1,20 @@
 import styled from "styled-components";
 
-export const NavbarHeader = styled.header`
+interface NavbarHeaderI {
+	height: number;
+}
+
+export const NavbarHeader = styled.header<NavbarHeaderI>`
 	width: 100%;
-	height: 4rem;
+	height: ${(props) => props.height}rem;
 	padding: 0.5rem 1rem;
 	position: fixed;
+	top: 0;
+	left: 0;
+
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(5px);
+	filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.dark}33);
 
 	display: flex;
 	justify-content: center;
@@ -14,8 +24,8 @@ export const NavbarHeader = styled.header`
 			height: 100dvh;
 			width: 100%;
 			background-color: ${(props) => props.theme.background2}BB;
-			backdrop-filter: blur(1px);
-			overflow: hidden;
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(1px);
 			transition: left 0.5s ease-in-out;
 
 			display: flex;
@@ -68,6 +78,7 @@ export const MainButton = styled.button`
 	border: none;
 	padding: 0.5rem;
 	cursor: pointer;
+	z-index: 2;
 
 	display: flex;
 	flex-direction: row;
@@ -107,11 +118,16 @@ export const NavbarButton = styled.button.attrs({
 })`
 	height: 100%;
 	background-color: transparent;
+	color: ${(props) => props.theme.text};
 	border: none;
 	padding: 0.75rem 0.5rem;
 	flex: 1;
 	cursor: pointer;
 	font-size: 0.85rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const MenuButton = styled.button.attrs({
@@ -124,6 +140,7 @@ export const MenuButton = styled.button.attrs({
 	padding: 0.25rem;
 	cursor: pointer;
 	color: ${(props) => props.theme.secondary};
+	z-index: 2;
 
 	display: flex;
 	justify-content: center;

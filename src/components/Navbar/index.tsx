@@ -1,26 +1,18 @@
 import { useState } from "react";
+import { ThemeConsumer } from "styled-components";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
 
 import { MainButton, MenuButton, NavbarButton, NavbarHeader, NavbarList, NavbarNav, NavbarWrapper } from "./styles";
 
-interface ButtonData {
+export const NAVBAR_HEIGHT_REM = 3.5;
+
+export interface NavButtonData {
 	text: string;
 	to: string;
 }
 
-function Button(props: { data: ButtonData }) {
-	return <NavbarButton>{props.data.text}</NavbarButton>;
-}
-
-const buttons: ButtonData[] = [
-	{ text: "About", to: "about" },
-	{ text: "Skills", to: "skills" },
-	{ text: "Projects", to: "projects" },
-	{ text: "Contact", to: "contact" },
-];
-
 interface NavbarI {
-	hideNavButtons?: boolean;
+	buttons?: NavButtonData[];
 }
 
 export default function Navbar(props: NavbarI) {
@@ -36,17 +28,21 @@ export default function Navbar(props: NavbarI) {
 		setMenuActive(false);
 	}
 
+	function Button(props: { data: NavButtonData }) {
+		return <NavbarButton>{props.data.text}</NavbarButton>;
+	}
+
 	return (
-		<NavbarHeader>
+		<NavbarHeader height={NAVBAR_HEIGHT_REM}>
 			<NavbarWrapper>
 				<MainButton>
-					<img src={"./logo-gradient.svg"} />
+					<ThemeConsumer>{(theme) => <img src={theme?.logo} />}</ThemeConsumer>
 				</MainButton>
-				{!props.hideNavButtons && (
+				{props.buttons && props.buttons.length > 0 && (
 					<>
 						<NavbarNav className={menuActive ? "menu-on" : "menu-off"}>
 							<NavbarList>
-								{buttons.map((button) => (
+								{props.buttons.map((button) => (
 									<li key={button.text} onClick={closeMenu}>
 										<Button data={button} />
 									</li>
