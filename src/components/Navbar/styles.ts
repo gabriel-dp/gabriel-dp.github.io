@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface NavbarHeaderI {
 	height: number;
+	$isAtTop: boolean;
 }
 
 export const NavbarHeader = styled.header<NavbarHeaderI>`
@@ -14,7 +15,8 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 
 	backdrop-filter: blur(7px);
 	-webkit-backdrop-filter: blur(5px);
-	filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.dark}33);
+	filter: ${(props) => (props.$isAtTop ? "none" : `drop-shadow(0 0 0.5rem ${props.theme.dark}33)`)};
+	transition: filter 0.25s ease-in-out;
 
 	display: flex;
 	justify-content: center;

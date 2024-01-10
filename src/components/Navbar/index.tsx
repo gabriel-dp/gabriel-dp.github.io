@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeConsumer } from "styled-components";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
 
@@ -16,7 +16,8 @@ interface NavbarI {
 }
 
 export default function Navbar(props: NavbarI) {
-	const [menuActive, setMenuActive] = useState(false);
+	const [menuActive, setMenuActive] = useState<boolean>(false);
+	const [isAtTop, setIsAtTop] = useState<boolean>(true);
 
 	// Controls menu visibility on low width
 	function handleMenuClick() {
@@ -28,12 +29,21 @@ export default function Navbar(props: NavbarI) {
 		setMenuActive(false);
 	}
 
-	function Button(props: { data: NavButtonData }) {
-		return <NavbarButton>{props.data.text}</NavbarButton>;
-	}
+	// Check if scroll is at the top of the page
+	const handleScroll = () => {
+		setIsAtTop(document.documentElement.scrollTop == 0);
+	};
+
+	// Set up a event to listen to the user scroll
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	return (
-		<NavbarHeader height={NAVBAR_HEIGHT_REM}>
+		<NavbarHeader height={NAVBAR_HEIGHT_REM} $isAtTop={isAtTop}>
 			<NavbarWrapper>
 				<MainButton>
 					<ThemeConsumer>{(theme) => <img src={theme?.logo} />}</ThemeConsumer>
@@ -44,7 +54,7 @@ export default function Navbar(props: NavbarI) {
 							<NavbarList>
 								{props.buttons.map((button) => (
 									<li key={button.text} onClick={closeMenu}>
-										<Button data={button} />
+										<NavbarButton>{button.text}</NavbarButton>
 									</li>
 								))}
 							</NavbarList>
