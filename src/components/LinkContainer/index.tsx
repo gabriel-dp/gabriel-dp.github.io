@@ -15,7 +15,7 @@ export function LinkContainerRouter(props: LinkContainerI & { top?: boolean }) {
 	}
 
 	return (
-		<CustomLinkRouter to={props.to} onClick={handleClick}>
+		<CustomLinkRouter to={props.to} onClick={handleClick} aria-label={props.to}>
 			{props.children}
 		</CustomLinkRouter>
 	);
@@ -31,7 +31,7 @@ export function LinkContainerScroll(props: LinkContainerI) {
 
 export function LinkContainerExternal(props: LinkContainerI) {
 	return (
-		<CustomLinkExternal href={props.to} rel="noopener noreferrer" target="_blank">
+		<CustomLinkExternal href={props.to} rel="noopener noreferrer" target="_blank" aria-label={props.to}>
 			{props.children}
 		</CustomLinkExternal>
 	);

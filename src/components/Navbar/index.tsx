@@ -49,12 +49,12 @@ export default function Navbar(props: NavbarI) {
 	return (
 		<NavbarHeader height={NAVBAR_HEIGHT_REM} $isAtTop={isAtTop}>
 			<NavbarWrapper>
-				<MainButton>
+				<MainButton aria-label="home-button">
 					<LinkContainerRouter to={Page.Home} top>
-						<ThemeConsumer>{(theme) => <img src={theme?.logo} />}</ThemeConsumer>
+						<ThemeConsumer>{(theme) => <img src={theme?.logo} alt="dp" />}</ThemeConsumer>
 					</LinkContainerRouter>
 				</MainButton>
-				{props.buttons && props.buttons.length > 0 && (
+				{props.buttons && props.buttons.length > 0 ? (
 					<>
 						<NavbarNav className={menuActive ? "menu-on" : "menu-off"}>
 							<NavbarList>
@@ -68,7 +68,13 @@ export default function Navbar(props: NavbarI) {
 							</NavbarList>
 							<ThemeSwitch />
 						</NavbarNav>
-						<MenuButton onClick={handleMenuClick}>{menuActive ? <MdOutlineClose /> : <MdMenu />}</MenuButton>
+						<MenuButton onClick={handleMenuClick} aria-label="menu-button">
+							{menuActive ? <MdOutlineClose /> : <MdMenu />}
+						</MenuButton>
+					</>
+				) : (
+					<>
+						<ThemeSwitch />
 					</>
 				)}
 			</NavbarWrapper>
