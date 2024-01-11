@@ -1,4 +1,4 @@
-import { AppTheme } from "./theme";
+import { AppTheme } from "@/styles/global";
 
 export const LightTheme: AppTheme = {
 	name: "light",

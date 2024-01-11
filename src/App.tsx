@@ -1,11 +1,11 @@
 import Router from "@/routes";
-import { ConfigsProvider } from "@/contexts/ConfigsContext";
+import { AppProvider } from "@/contexts";
 
 export default function App() {
 	return (
-		<ConfigsProvider>
+		<AppProvider>
 			<Router />
-		</ConfigsProvider>
+		</AppProvider>
 	);
 }
 

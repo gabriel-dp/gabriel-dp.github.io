@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { ThemeConsumer } from "styled-components";
 import { FaBars as MenuIcon, FaTimes as CloseIcon } from "react-icons/fa";
 
 import Page from "@/pages/Page";
+import { useTheme } from "@/contexts/theme/useTheme";
 import { LinkContainerRouter, LinkContainerScroll } from "@/components/LinkContainer";
 import ThemeSwitch from "@/components/ThemeSwitch";
 
@@ -46,12 +46,14 @@ export default function Navbar(props: NavbarI) {
 		};
 	}, []);
 
+	const theme = useTheme();
+
 	return (
 		<NavbarHeader height={NAVBAR_HEIGHT_REM} $isAtTop={isAtTop}>
 			<NavbarWrapper>
 				<MainButton aria-label="home-button">
 					<LinkContainerRouter to={Page.Home} top $onClick={closeMenu}>
-						<ThemeConsumer>{(theme) => <img src={theme?.logo} alt="dp" />}</ThemeConsumer>
+						<img src={theme?.logo} alt="dp" />
 					</LinkContainerRouter>
 				</MainButton>
 				{props.buttons && props.buttons.length > 0 ? (

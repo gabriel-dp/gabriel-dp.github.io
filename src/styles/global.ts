@@ -1,6 +1,23 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, DefaultTheme } from "styled-components";
 
-import { AppTheme } from "@/styles/themes/theme";
+export type HexColor = `#${string}`;
+
+export interface AppTheme extends DefaultTheme {
+	name: string;
+	logo: string;
+	primary: HexColor;
+	secondary: HexColor;
+	primaryText: HexColor;
+	primaryHighlight: HexColor;
+	text: HexColor;
+	background1: HexColor;
+	background2: HexColor;
+	light: HexColor;
+	dark: HexColor;
+	gray: HexColor;
+	color1: HexColor;
+	color2: HexColor;
+}
 
 export default createGlobalStyle<{ theme: AppTheme }>`
     * {

@@ -1,12 +1,11 @@
-import { useContext } from "react";
 import { FaSun as SunIcon, FaMoon as MoonIcon } from "react-icons/fa";
 
-import { ConfigsContext } from "@/contexts/ConfigsContext";
+import { useConfigs } from "@/contexts/configs/useConfigs";
 
 import { Switch } from "./styles";
 
 export default function ThemeSwitch() {
-	const { darkMode, toggleTheme } = useContext(ConfigsContext);
+	const { darkMode, toggleTheme } = useConfigs();
 
 	return (
 		<Switch>
