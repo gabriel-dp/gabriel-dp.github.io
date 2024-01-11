@@ -154,7 +154,7 @@ export const MenuButton = styled.button.attrs({
 	visibility: hidden;
 	background-color: transparent;
 	border: none;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	padding: 0.25rem;
 	cursor: pointer;
 	color: ${(props) => props.theme.secondary};

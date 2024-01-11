@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ThemeConsumer } from "styled-components";
-import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { FaBars as MenuIcon, FaTimes as CloseIcon } from "react-icons/fa";
 
 import Page from "@/pages/Page";
 import { LinkContainerRouter, LinkContainerScroll } from "@/components/LinkContainer";
@@ -71,7 +71,7 @@ export default function Navbar(props: NavbarI) {
 							<ThemeSwitch />
 						</NavbarNav>
 						<MenuButton onClick={handleMenuClick} aria-label="menu-button">
-							{menuActive ? <MdOutlineClose /> : <MdMenu />}
+							{menuActive ? <CloseIcon /> : <MenuIcon />}
 						</MenuButton>
 					</>
 				) : (

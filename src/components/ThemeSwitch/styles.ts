@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const TRAIL_WIDTH_REM = 2.5;
 const TRAIL_HEIGHT_REM = 0.9;
-const SWITCH_SIZE_REM = 1.41;
+const SWITCH_SIZE_REM = 1.4;
 
 export const Switch = styled.div`
 	position: relative;
@@ -54,9 +54,9 @@ export const Switch = styled.div`
 		width: ${SWITCH_SIZE_REM}rem;
 		aspect-ratio: 1;
 		border-radius: 100%;
-		background: ${(props) => props.theme.light};
+		background-color: ${(props) => props.theme.light};
 		border: 1px solid ${(props) => props.theme.text}AA;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		color: ${(props) => props.theme.gray};
 		filter: drop-shadow(0 0 0.25rem ${(props) => props.theme.light}AA);
 
@@ -68,10 +68,6 @@ export const Switch = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
-		.icon {
-			transform: rotate(-20deg);
-		}
 	}
 
 	input:checked + label .track {
@@ -80,6 +76,7 @@ export const Switch = styled.div`
 
 	input:checked + label .button {
 		right: 0;
+		color: ${(props) => props.theme.color1};
 	}
 `;
 

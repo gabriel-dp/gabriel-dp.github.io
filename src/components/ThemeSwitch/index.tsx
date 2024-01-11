@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MdSunny, MdNightlight } from "react-icons/md";
+import { FaSun as SunIcon, FaMoon as MoonIcon } from "react-icons/fa";
 
 import { ConfigsContext } from "@/contexts/ConfigsContext";
 
@@ -13,7 +13,7 @@ export default function ThemeSwitch() {
 			<input type="checkbox" id="cb" name="cb" checked={darkMode} onChange={() => {}} />
 			<label htmlFor="cb" onClick={toggleTheme}>
 				<div className="track"></div>
-				<div className="button">{darkMode ? <MdNightlight className="icon" /> : <MdSunny className="icon" />}</div>
+				<div className="button">{darkMode ? <MoonIcon className="icon" /> : <SunIcon className="icon" />}</div>
 			</label>
 		</Switch>
 	);
