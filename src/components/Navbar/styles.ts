@@ -58,7 +58,7 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 		}
 
 		.menu-button {
-			opacity: 1;
+			visibility: visible;
 		}
 	}
 `;
@@ -78,7 +78,6 @@ export const MainButton = styled.button`
 	height: 100%;
 	background-color: transparent;
 	border: none;
-	padding: 0.5rem;
 	cursor: pointer;
 	z-index: 2;
 
@@ -90,6 +89,10 @@ export const MainButton = styled.button`
 	img {
 		height: 100%;
 		max-height: 100%;
+	}
+
+	.link {
+		padding: 0.5rem;
 	}
 `;
 
@@ -122,7 +125,6 @@ export const NavbarButton = styled.button.attrs({
 	background-color: transparent;
 	color: ${(props) => props.theme.text};
 	border: none;
-	padding: 0.75rem 0.5rem;
 	flex: 1;
 	cursor: pointer;
 	font-size: 0.85rem;
@@ -130,12 +132,16 @@ export const NavbarButton = styled.button.attrs({
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	.link {
+		padding: 0.75rem 0.5rem;
+	}
 `;
 
 export const MenuButton = styled.button.attrs({
 	className: "menu-button",
 })`
-	opacity: 0;
+	visibility: hidden;
 	background-color: transparent;
 	border: none;
 	font-size: 1.5rem;

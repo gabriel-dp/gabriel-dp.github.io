@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { ThemeConsumer } from "styled-components";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
 
+import Page from "@/pages/Page";
+import { LinkContainerRouter, LinkContainerScroll } from "@/components/LinkContainer";
+
 import { MainButton, MenuButton, NavbarButton, NavbarHeader, NavbarList, NavbarNav, NavbarWrapper } from "./styles";
 
 export const NAVBAR_HEIGHT_REM = 3.5;
@@ -46,7 +49,9 @@ export default function Navbar(props: NavbarI) {
 		<NavbarHeader height={NAVBAR_HEIGHT_REM} $isAtTop={isAtTop}>
 			<NavbarWrapper>
 				<MainButton>
-					<ThemeConsumer>{(theme) => <img src={theme?.logo} />}</ThemeConsumer>
+					<LinkContainerRouter to={Page.Home} top>
+						<ThemeConsumer>{(theme) => <img src={theme?.logo} />}</ThemeConsumer>
+					</LinkContainerRouter>
 				</MainButton>
 				{props.buttons && props.buttons.length > 0 && (
 					<>
@@ -54,7 +59,9 @@ export default function Navbar(props: NavbarI) {
 							<NavbarList>
 								{props.buttons.map((button) => (
 									<li key={button.text} onClick={closeMenu}>
-										<NavbarButton>{button.text}</NavbarButton>
+										<NavbarButton>
+											<LinkContainerScroll to={button.to}>{button.text}</LinkContainerScroll>
+										</NavbarButton>
 									</li>
 								))}
 							</NavbarList>
