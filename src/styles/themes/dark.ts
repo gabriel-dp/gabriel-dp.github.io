@@ -1,6 +1,7 @@
 import { AppTheme } from "./theme";
 
 export const DarkTheme: AppTheme = {
+	name: "dark",
 	logo: "./logo-white.svg",
 	primary: "#FAFAFA",
 	secondary: "#DDDDDD",
@@ -9,8 +10,10 @@ export const DarkTheme: AppTheme = {
 	text: "#FAFAFA",
 	background1: "#206E8C",
 	background2: "#191E2D",
-	light: "#EEEEEE",
+	light: "#FAFAFA",
 	dark: "#111111",
 	gray: "#666666",
+	color1: "#206E8C",
+	color2: "#191E2D",
 };
 

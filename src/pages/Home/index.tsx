@@ -13,6 +13,7 @@ export default function Home() {
 	return (
 		<>
 			<Navbar buttons={navButtons} />
+			<HomeAbout id="#home" />
 			<HomeAbout id="#about" />
 			<HomeAbout id="#skills" />
 			<HomeAbout id="#projects" />

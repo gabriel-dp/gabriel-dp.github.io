@@ -4,6 +4,7 @@ import { MdMenu, MdOutlineClose } from "react-icons/md";
 
 import Page from "@/pages/Page";
 import { LinkContainerRouter, LinkContainerScroll } from "@/components/LinkContainer";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 import { MainButton, MenuButton, NavbarButton, NavbarHeader, NavbarList, NavbarNav, NavbarWrapper } from "./styles";
 
@@ -65,6 +66,7 @@ export default function Navbar(props: NavbarI) {
 									</li>
 								))}
 							</NavbarList>
+							<ThemeSwitch />
 						</NavbarNav>
 						<MenuButton onClick={handleMenuClick}>{menuActive ? <MdOutlineClose /> : <MdMenu />}</MenuButton>
 					</>

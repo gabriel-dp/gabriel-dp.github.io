@@ -8,7 +8,7 @@ interface NavbarHeaderI {
 export const NavbarHeader = styled.header<NavbarHeaderI>`
 	width: 100%;
 	height: ${(props) => props.height}rem;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1.5rem;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -31,7 +31,9 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 			transition: left 0.5s ease-in-out;
 
 			display: flex;
+			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 
 			position: fixed;
 			top: 0;
@@ -98,6 +100,10 @@ export const MainButton = styled.button`
 
 export const NavbarNav = styled.nav`
 	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
 `;
 
 export const NavbarList = styled.ul`
@@ -128,6 +134,7 @@ export const NavbarButton = styled.button.attrs({
 	flex: 1;
 	cursor: pointer;
 	font-size: 0.85rem;
+	transition: color 0.25s ease-in-out;
 
 	display: flex;
 	justify-content: center;
