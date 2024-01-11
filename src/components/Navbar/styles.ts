@@ -74,6 +74,7 @@ export const NavbarWrapper = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	gap: 1rem;
 `;
 
 export const MainButton = styled.button`
@@ -108,6 +109,8 @@ export const NavbarNav = styled.nav`
 
 export const NavbarList = styled.ul`
 	height: 100%;
+	max-width: 100%;
+	overflow: hidden;
 
 	display: flex;
 	flex-direction: row;
@@ -159,9 +162,10 @@ export const MenuButton = styled.button.attrs({
 
 	display: flex;
 	justify-content: center;
+
 	position: absolute;
+	right: 0;
 	top: 50%;
-	right: 1rem;
 	transform: translateY(-50%);
 `;
 

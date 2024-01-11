@@ -6,7 +6,7 @@ const SWITCH_SIZE_REM = 1.41;
 
 export const Switch = styled.div`
 	position: relative;
-	width: ${TRAIL_WIDTH_REM}rem;
+	min-width: ${TRAIL_WIDTH_REM}rem;
 
 	display: flex;
 	align-items: center;
