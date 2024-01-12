@@ -25,7 +25,7 @@ export const Switch = styled.div`
 		display: block;
 		overflow: hidden;
 		cursor: pointer;
-		border: 1.5px solid ${(props) => props.theme.text}AA;
+		border: 1px solid ${(props) => props.theme.text}AA;
 		transition: none;
 		border-radius: 100rem;
 	}
@@ -53,13 +53,12 @@ export const Switch = styled.div`
 	}
 
 	.button {
-		width: ${SWITCH_SIZE_REM}rem;
+		width: calc(${SWITCH_SIZE_REM}rem + 1px); // 1px to ensure centering
 		aspect-ratio: 1;
 		border-radius: 100%;
 		background-color: ${(props) => props.theme.light};
 		border: 1px solid ${(props) => props.theme.text}AA;
 		font-size: 0.7rem;
-		color: ${(props) => props.theme.gray};
 		filter: drop-shadow(0 0 0.25rem ${(props) => props.theme.light}AA);
 
 		position: absolute;
@@ -70,6 +69,10 @@ export const Switch = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		.icon > path {
+			color: ${(props) => props.theme.gray};
+		}
 	}
 
 	input:checked + label .track {
@@ -79,7 +82,7 @@ export const Switch = styled.div`
 	input:checked + label .button {
 		right: 0;
 
-		* {
+		.icon > path {
 			color: ${(props) => props.theme.color1};
 		}
 	}

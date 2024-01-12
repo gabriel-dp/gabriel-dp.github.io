@@ -65,7 +65,7 @@ export default function Navbar(props: NavbarI) {
 									<li key={button.text}>
 										<NavbarButton>
 											<LinkContainerScroll to={button.to} $onClick={closeMenu}>
-												{button.text}
+												<span>{button.text}</span>
 											</LinkContainerScroll>
 										</NavbarButton>
 									</li>
@@ -74,7 +74,7 @@ export default function Navbar(props: NavbarI) {
 							<ThemeSwitch />
 						</NavbarNav>
 						<MenuButton onClick={handleMenuClick} aria-label="menu-button">
-							{menuActive ? <CloseIcon /> : <MenuIcon />}
+							{menuActive ? <CloseIcon className="icon" /> : <MenuIcon className="icon" />}
 						</MenuButton>
 					</>
 				) : (

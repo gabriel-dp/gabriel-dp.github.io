@@ -30,6 +30,7 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 		nav {
 			height: 100lvh;
 			width: 100%;
+			padding: 1rem;
 			background-color: ${(props) => props.theme.background2}BB;
 
 			display: flex;
@@ -124,7 +125,8 @@ export const NavbarNav = styled.nav`
 export const NavbarList = styled.ul`
 	height: 100%;
 	max-width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 	display: flex;
 	flex-direction: row;
@@ -145,13 +147,13 @@ export const NavbarButton = styled.button.attrs({
 	className: "nav-button",
 })`
 	height: 100%;
+	width: min-content;
 	background-color: transparent;
 	color: ${(props) => props.theme.text};
 	border: none;
-	flex: 1;
 	cursor: pointer;
 	font-size: 0.85rem;
-	transition: color 0.25s ease-in-out;
+	position: relative;
 
 	display: flex;
 	justify-content: center;
@@ -159,6 +161,37 @@ export const NavbarButton = styled.button.attrs({
 
 	.link {
 		padding: 0.75rem 0.5rem;
+	}
+
+	* {
+		transition: all 0.25s ease-in-out;
+	}
+
+	@media (hover: hover) {
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			right: 50%;
+			transform: translate(0, -0.5rem);
+			height: 1px;
+			border-radius: 100rem;
+			background-color: ${(props) => props.theme.primary};
+			transition: all 0.25s ease-in-out;
+		}
+
+		&:hover::after {
+			left: 25%;
+			right: 25%;
+		}
+
+		&:hover {
+			span {
+				color: ${(props) => props.theme.primary};
+				transform: translateY(-0.1rem);
+			}
+		}
 	}
 `;
 
@@ -171,7 +204,6 @@ export const MenuButton = styled.button.attrs({
 	font-size: 1.25rem;
 	padding: 0.25rem;
 	cursor: pointer;
-	color: ${(props) => props.theme.secondary};
 	z-index: 2;
 
 	display: flex;
@@ -181,5 +213,9 @@ export const MenuButton = styled.button.attrs({
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+
+	.icon > path {
+		color: ${(props) => props.theme.secondary};
+	}
 `;
 
