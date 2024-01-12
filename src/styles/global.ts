@@ -28,6 +28,7 @@ export default createGlobalStyle<{ theme: AppTheme }>`
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         -webkit-tap-highlight-color: transparent;
         
+        color: ${(props) => props.theme.text};
         ::selection {
             background-color: ${(props) => props.theme.primary};
             color: ${(props) => props.theme.primaryText};
@@ -35,11 +36,9 @@ export default createGlobalStyle<{ theme: AppTheme }>`
     }
 
     body {
-        background-image: linear-gradient(135deg, ${(props) =>
-					`${props.theme.background1}, ${props.theme.background2}`});
-        background-attachment: fixed;
-        color: ${(props) => props.theme.text};
+        background-color: ${(props) => props.theme.background2};
         transition: background 0.25s ease, color 0.25s ease;
     }
+
 `;
 

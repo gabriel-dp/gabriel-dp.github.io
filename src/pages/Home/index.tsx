@@ -1,3 +1,4 @@
+import PageWrapper from "@/components/PageWrapper";
 import Navbar, { NavButtonData } from "@/components/Navbar";
 
 import HomeAbout from "./HomeAbout";
@@ -11,14 +12,14 @@ export default function Home() {
 	];
 
 	return (
-		<>
+		<PageWrapper>
 			<Navbar buttons={navButtons} />
-			<HomeAbout id="#home" />
-			<HomeAbout id="#about" />
-			<HomeAbout id="#skills" />
-			<HomeAbout id="#projects" />
-			<HomeAbout id="#contact" />
-		</>
+			<HomeAbout />
+			<HomeAbout $id="#about" />
+			<HomeAbout $id="#skills" />
+			<HomeAbout $id="#projects" />
+			<HomeAbout $id="#contact" />
+		</PageWrapper>
 	);
 }
 

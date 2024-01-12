@@ -12,6 +12,7 @@ export const Switch = styled.div`
 	align-items: center;
 
 	* {
+		user-select: none;
 		transition: all 0.25s ease-in-out;
 	}
 
@@ -24,7 +25,8 @@ export const Switch = styled.div`
 		display: block;
 		overflow: hidden;
 		cursor: pointer;
-		border: 1px solid ${(props) => props.theme.text}AA;
+		border: 1.5px solid ${(props) => props.theme.text}AA;
+		transition: none;
 		border-radius: 100rem;
 	}
 
@@ -76,7 +78,10 @@ export const Switch = styled.div`
 
 	input:checked + label .button {
 		right: 0;
-		color: ${(props) => props.theme.color1};
+
+		* {
+			color: ${(props) => props.theme.color1};
+		}
 	}
 `;
 

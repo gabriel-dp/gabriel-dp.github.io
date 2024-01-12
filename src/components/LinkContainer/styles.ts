@@ -8,6 +8,10 @@ const CustomLink = css`
 	width: 100%;
 	text-decoration: none;
 	color: inherit;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const CustomLinkRouter = styled(LinkRouter).attrs({

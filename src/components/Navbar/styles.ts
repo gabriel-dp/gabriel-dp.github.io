@@ -8,27 +8,25 @@ interface NavbarHeaderI {
 export const NavbarHeader = styled.header<NavbarHeaderI>`
 	width: 100%;
 	height: ${(props) => props.height}rem;
-	padding: 0.5rem 1.5rem;
+	padding: 0.25rem 1.5rem;
 	position: fixed;
 	top: 0;
 	left: 0;
 
 	backdrop-filter: blur(7px);
-	-webkit-backdrop-filter: blur(5px);
-	filter: ${(props) => (props.$isAtTop ? "none" : `drop-shadow(0 0 0.5rem ${props.theme.dark}33)`)};
-	transition: filter 0.25s ease-in-out;
+	-webkit-backdrop-filter: blur(7px);
+	box-shadow: ${(props) => (props.$isAtTop ? "none" : `0 0 0.5rem ${props.theme.dark}33`)};
+	transition: box-shadow 0.25s ease-in-out, backdrop-filter 0.25s ease-in-out 1s;
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	@media screen and (max-width: 767px) {
 		nav {
-			height: 100dvh;
+			height: 100lvh;
 			width: 100%;
 			background-color: ${(props) => props.theme.background2}BB;
-			backdrop-filter: blur(5px);
-			-webkit-backdrop-filter: blur(1px);
-			transition: left 0.5s ease-in-out;
 
 			display: flex;
 			flex-direction: column;
@@ -45,6 +43,15 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 
 			&.menu-on {
 				left: 0;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				backdrop-filter: blur(7px);
+				-webkit-backdrop-filter: blur(7px);
+				z-index: -1;
 			}
 		}
 
@@ -95,12 +102,16 @@ export const MainButton = styled.button`
 	}
 
 	.link {
-		padding: 0.5rem;
+		padding: 0.5rem 0;
 	}
 `;
 
 export const NavbarNav = styled.nav`
 	height: 100%;
+
+	backdrop-filter: blur(0);
+	-webkit-backdrop-filter: blur(0);
+	transition: left 0.5s ease-in-out, backdrop-filter 1s ease-in-out;
 
 	display: flex;
 	flex-direction: row;
