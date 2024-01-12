@@ -8,19 +8,23 @@ interface NavbarHeaderI {
 export const NavbarHeader = styled.header<NavbarHeaderI>`
 	width: 100%;
 	height: ${(props) => props.height}rem;
-	padding: 0.25rem 1.5rem;
+	padding: 0.375rem 1.5rem;
 	position: fixed;
 	top: 0;
 	left: 0;
 
-	backdrop-filter: blur(7px);
-	-webkit-backdrop-filter: blur(7px);
-	box-shadow: ${(props) => (props.$isAtTop ? "none" : `0 0 0.5rem ${props.theme.dark}33`)};
-	transition: box-shadow 0.25s ease-in-out, backdrop-filter 0.25s ease-in-out 1s;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		backdrop-filter: blur(7px);
+		box-shadow: ${(props) => (props.$isAtTop ? "none" : `0 0 0.5rem ${props.theme.dark}55`)};
+		transition: box-shadow 0.25s ease-in-out;
+	}
 
 	@media screen and (max-width: 767px) {
 		nav {
@@ -50,7 +54,6 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 				position: absolute;
 				inset: 0;
 				backdrop-filter: blur(7px);
-				-webkit-backdrop-filter: blur(7px);
 				z-index: -1;
 			}
 		}

@@ -41,6 +41,7 @@ export default function Navbar(props: NavbarI) {
 	// Set up a event to listen to the user scroll
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
+		handleScroll();
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
