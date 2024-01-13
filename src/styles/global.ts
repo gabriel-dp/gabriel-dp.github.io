@@ -25,7 +25,7 @@ export default createGlobalStyle<{ theme: AppTheme }>`
         padding: 0;
         outline: 0;
         box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Quicksand', 'Segoe UI', sans-serif;
         -webkit-tap-highlight-color: transparent;
         
         color: ${(props) => props.theme.text};
@@ -33,12 +33,19 @@ export default createGlobalStyle<{ theme: AppTheme }>`
             background-color: ${(props) => props.theme.primary};
             color: ${(props) => props.theme.primaryText};
         }
+        
     }
-
+    
     body {
         background-color: ${(props) => props.theme.background2};
         transition: background 0.25s ease, color 0.25s ease;
+        
     }
-
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins','Segoe UI', sans-serif !important;
+        font-weight: bolder;
+    }
+    
 `;
 

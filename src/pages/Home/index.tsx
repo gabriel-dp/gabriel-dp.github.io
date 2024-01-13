@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import Navbar, { NavButtonData } from "@/components/Navbar";
 
-import HomeAbout from "./HomeAbout";
+import HomeMain from "./HomeMain";
 
 export default function Home() {
 	const navButtons: NavButtonData[] = [
@@ -14,11 +14,7 @@ export default function Home() {
 	return (
 		<PageWrapper>
 			<Navbar buttons={navButtons} />
-			<HomeAbout />
-			<HomeAbout $id="#about" />
-			<HomeAbout $id="#skills" />
-			<HomeAbout $id="#projects" />
-			<HomeAbout $id="#contact" />
+			<HomeMain $id="home" />
 		</PageWrapper>
 	);
 }

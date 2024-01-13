@@ -55,7 +55,6 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 				position: absolute;
 				inset: 0;
 				backdrop-filter: blur(7px);
-				z-index: -1;
 			}
 		}
 
@@ -152,7 +151,7 @@ export const NavbarButton = styled.button.attrs({
 	color: ${(props) => props.theme.text};
 	border: none;
 	cursor: pointer;
-	font-size: 0.85rem;
+	font-size: 1rem;
 	position: relative;
 
 	display: flex;
@@ -164,7 +163,7 @@ export const NavbarButton = styled.button.attrs({
 	}
 
 	* {
-		transition: all 0.25s ease-in-out;
+		transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
 	}
 
 	@media (hover: hover) {
