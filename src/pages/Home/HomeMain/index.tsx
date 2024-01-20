@@ -1,14 +1,20 @@
-import GradientComponent from "@/components/GradientComponent";
-import { MainSection, MainContainer, HorizontalLine } from "./styles";
+import TypeWriter from "typewriter-effect";
+
 import { useTheme } from "@/contexts/theme/useTheme";
+import GradientComponent from "@/components/GradientComponent";
+
+import { MainSection, MainContainer, HorizontalLine } from "./styles";
 
 export default function HomeMain(props: { $id: string }) {
 	const theme = useTheme();
+
+	const strings = ["Software Developer", "3D Modeler"];
 
 	return (
 		<MainSection id={props.$id}>
 			<MainContainer>
 				<GradientComponent
+					className="title"
 					direction={150}
 					colors={[
 						{ color: theme?.primary, position: 0 },
@@ -25,6 +31,7 @@ export default function HomeMain(props: { $id: string }) {
 					</em>
 				</p>
 				<GradientComponent
+					className="line"
 					direction={45}
 					colors={[
 						{ color: theme?.primary, position: 0 },
@@ -32,6 +39,16 @@ export default function HomeMain(props: { $id: string }) {
 					]}>
 					<HorizontalLine />
 				</GradientComponent>
+				<TypeWriter
+					options={{
+						strings,
+						autoStart: true,
+						loop: true,
+						delay: 75,
+						deleteSpeed: 50,
+						wrapperClassName: "text",
+					}}
+				/>
 			</MainContainer>
 		</MainSection>
 	);

@@ -9,6 +9,7 @@ interface GradientTextI {
 	direction: number; // deg
 	colors: Color[];
 	text?: boolean;
+	className?: string;
 	children: React.ReactElement<HTMLElement>;
 }
 
@@ -27,7 +28,7 @@ export default function GradientText(props: GradientTextI) {
 	const gradient: string = `${props.direction}deg, ${colors.join(", ")}`;
 
 	return (
-		<ComponentContainer $gradient={gradient} $text={props.text ?? false}>
+		<ComponentContainer className={props.className} $gradient={gradient} $text={props.text ?? false}>
 			{props.children}
 		</ComponentContainer>
 	);

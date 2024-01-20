@@ -6,6 +6,8 @@ interface ComponentContainerI {
 }
 
 export const ComponentContainer = styled.div<ComponentContainerI>`
+	align-self: stretch;
+
 	& > * {
 		background: linear-gradient(${(props) => props.$gradient});
 		background-clip: ${(props) => (props.$text ? "text" : "none")};

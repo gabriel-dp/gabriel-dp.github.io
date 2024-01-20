@@ -16,20 +16,23 @@ export const MainSection = styled.div`
 export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 0;
 
 	* {
 		transition: font-size 0.25s ease-in-out;
 	}
 
-	h1 {
-		font-size: 3rem;
-		text-align: center;
-		font-weight: bold;
+	.title {
+		h1 {
+			font-size: 3rem;
+			text-align: center;
+			font-weight: bold;
 
-		span {
-			font-family: inherit;
-			display: inline-block;
+			span {
+				font-family: inherit;
+				display: inline-block;
+			}
 		}
 	}
 
@@ -47,13 +50,34 @@ export const MainContainer = styled.div`
 		}
 	}
 
+	.Typewriter {
+		width: min-content;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+		flex-wrap: nowrap;
+
+		font-size: 1.25rem;
+		* {
+			color: ${(props) => props.theme.secondary};
+		}
+	}
+
 	@media screen and (max-width: 767px) {
-		h1 {
-			font-size: 2.5rem;
+		.title {
+			h1 {
+				font-size: 2.5rem;
+			}
 		}
 
 		p {
 			font-size: 0.9rem;
+		}
+
+		.Typewriter {
+			font-size: 1rem;
 		}
 	}
 `;
@@ -68,7 +92,6 @@ const lineAnimation = keyframes`
 `;
 
 export const HorizontalLine = styled.div`
-	width: 0;
 	height: 2px;
 	margin: 1rem auto;
 	position: relative;
