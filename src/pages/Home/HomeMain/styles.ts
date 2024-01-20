@@ -42,10 +42,9 @@ export const MainContainer = styled.div`
 		font-weight: light;
 		text-align: center;
 		text-decoration: dashed;
-		color: ${(props) => props.theme.text};
 
 		span {
-			color: inherit;
+			color: ${(props) => props.theme.secondary};
 			display: inline-block;
 		}
 	}
