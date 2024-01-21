@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
 
-export const MainSection = styled.div`
+export const MainSection = styled.section`
 	width: 100%;
 	min-height: calc(100dvh - (${NAVBAR_HEIGHT_REM}rem + 1rem));
 	padding: 0 1.25rem;
