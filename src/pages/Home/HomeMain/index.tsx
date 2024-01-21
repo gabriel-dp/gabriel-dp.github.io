@@ -1,7 +1,6 @@
-import TypeWriter from "typewriter-effect";
-
 import { useTheme } from "@/contexts/theme/useTheme";
 import GradientComponent from "@/components/GradientComponent";
+import TypeWriterComponent from "@/components/TypeWriterComponent";
 
 import { MainSection, MainContainer, HorizontalLine } from "./styles";
 
@@ -39,16 +38,7 @@ export default function HomeMain(props: { $id: string }) {
 					]}>
 					<HorizontalLine />
 				</GradientComponent>
-				<TypeWriter
-					options={{
-						strings,
-						autoStart: true,
-						loop: true,
-						delay: 75,
-						deleteSpeed: 50,
-						wrapperClassName: "text",
-					}}
-				/>
+				<TypeWriterComponent strings={strings} $className="typewriter" />
 			</MainContainer>
 		</MainSection>
 	);

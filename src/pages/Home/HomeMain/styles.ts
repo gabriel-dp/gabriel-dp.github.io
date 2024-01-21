@@ -49,15 +49,7 @@ export const MainContainer = styled.div`
 		}
 	}
 
-	.Typewriter {
-		width: min-content;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		white-space: nowrap;
-		flex-wrap: nowrap;
-
+	.typewriter {
 		font-size: 1.25rem;
 		* {
 			color: ${(props) => props.theme.secondary};
@@ -75,7 +67,7 @@ export const MainContainer = styled.div`
 			font-size: 0.9rem;
 		}
 
-		.Typewriter {
+		.typewriter {
 			font-size: 1rem;
 		}
 	}
