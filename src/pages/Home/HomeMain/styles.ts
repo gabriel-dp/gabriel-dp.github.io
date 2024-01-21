@@ -73,31 +73,11 @@ export const HorizontalLine = styled.div`
 	height: 2px;
 	margin: 1.25rem auto;
 	position: relative;
+	background-color: ${(props) => props.theme.secondary};
+	border-radius: 100rem;
 	z-index: -1;
 
-	animation: ${lineAnimation} 0.625s ease-in-out forwards 0.25s;
-
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		width: 6px;
-		aspect-ratio: 1;
-		border-radius: 50%;
-	}
-
-	&::before {
-		left: 0;
-		transform: translate(-50%, -50%);
-		background-color: ${(props) => props.theme.primary};
-	}
-
-	&::after {
-		right: 0;
-		transform: translate(50%, -50%);
-		background-color: ${(props) => props.theme.secondary};
-	}
+	animation: ${lineAnimation} 0.625s ease-in-out forwards;
 `;
 
 export const SocialContainer = styled.div`
@@ -117,7 +97,7 @@ export const SocialContainer = styled.div`
 
 		&:hover {
 			color: ${(props) => props.theme.primary};
-			filter: drop-shadow(0 0 1rem ${(props) => props.theme.primary}AA);
+			filter: drop-shadow(0 0 1rem ${(props) => props.theme.primary}77);
 		}
 	}
 `;
