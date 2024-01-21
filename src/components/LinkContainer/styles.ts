@@ -3,15 +3,19 @@ import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
 const CustomLink = css`
-	display: inline-block;
 	height: 100%;
 	width: 100%;
 	text-decoration: none;
-	color: inherit;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&,
+	* {
+		transition: inherit;
+		color: inherit;
+	}
 `;
 
 export const CustomLinkRouter = styled(LinkRouter).attrs({
