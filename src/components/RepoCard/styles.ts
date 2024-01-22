@@ -1,40 +1,74 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
-	width: 100%;
+interface CardContainerI {
+	layout: "horizontal" | "vertical";
+}
+
+export const CardContainer = styled.div<CardContainerI>`
+	width: max(100%, 10rem);
+	height: auto;
+	flex-direction: column;
 	border-radius: 0.75rem;
-	position: relative;
 	overflow: hidden;
 	overflow-x: auto;
 	background-color: ${(props) => props.theme.primary}DD;
 	border: 2px solid ${(props) => props.theme.primary}DD;
 	transition: all 0.25s ease-in-out;
 
+	display: flex;
+	flex-direction: column;
+
 	&:hover {
 		filter: drop-shadow(0 0 1rem ${(props) => props.theme.text}77);
 		border: 2px solid ${(props) => props.theme.primary};
 	}
 
-	display: flex;
-	flex-direction: column;
+	${(props) =>
+		props.layout != "horizontal"
+			? ""
+			: `
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+	
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+	
+			.social-preview-container {
+				flex: 1;
+			}
+	
+			.data-container {
+				width: 40%;
+			}
+		}
+	`}
 `;
 
-export const SocialPreviewContainer = styled.div`
+export const SocialPreviewContainer = styled.div.attrs({
+	className: "social-preview-container",
+})`
 	width: 100%;
 	aspect-ratio: 2;
 	border-radius: calc(inherit - 0.25rem);
 	overflow: hidden;
+	position: relative;
 
 	img {
-		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
 	}
 `;
 
-export const DataContainer = styled.div`
+export const DataContainer = styled.div.attrs({
+	className: "data-container",
+})`
+	width: auto;
 	padding: 1rem;
 
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: 0.75rem;
 
 	* {
@@ -93,7 +127,9 @@ export const ActionButton = styled.button`
 	}
 `;
 
-export const LanguageContainer = styled.div`
+export const LanguageContainer = styled.div.attrs({
+	className: "language-container",
+})`
 	padding: 0.5rem 1rem;
 	position: absolute;
 	background-color: ${(props) => props.theme.primary}CC;
@@ -108,5 +144,11 @@ export const LanguageContainer = styled.div`
 		font-size: 0.85rem;
 		color: ${(props) => props.theme.primaryText};
 	}
+`;
+
+export const DataTextContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 `;
 
