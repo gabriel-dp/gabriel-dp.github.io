@@ -10,7 +10,7 @@ interface GradientTextI {
 	colors: Color[];
 	text?: boolean;
 	className?: string;
-	children: React.ReactElement<HTMLElement>;
+	children: React.ReactElement<HTMLElement> | React.ReactElement<HTMLElement>[];
 }
 
 export default function GradientText(props: GradientTextI) {

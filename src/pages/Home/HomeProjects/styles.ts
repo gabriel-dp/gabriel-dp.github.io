@@ -20,6 +20,18 @@ export const CardsContainer = styled.div`
 
 	@media screen and (min-width: 768px) {
 		width: min(100%, 50rem);
+
+		.gradient:nth-child(even) > .card {
+			flex-direction: row-reverse;
+		}
+
+		.gradient:nth-child(even) {
+			margin-left: 5%;
+		}
+
+		.gradient:nth-child(odd) {
+			margin-right: 5%;
+		}
 	}
 `;
 

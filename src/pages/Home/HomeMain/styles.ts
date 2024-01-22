@@ -43,6 +43,10 @@ export const MainContainer = styled.div`
 		}
 	}
 
+	.line {
+		margin: 1.25rem 0;
+	}
+
 	@media screen and (max-width: 767px) {
 		.title {
 			h1 {
@@ -71,7 +75,6 @@ const lineAnimation = keyframes`
 
 export const HorizontalLine = styled.div`
 	height: 2px;
-	margin: 1.25rem auto;
 	position: relative;
 	background-color: ${(props) => props.theme.secondary};
 	border-radius: 100rem;

@@ -11,16 +11,22 @@ export const CardContainer = styled.div<CardContainerI>`
 	border-radius: 0.75rem;
 	overflow: hidden;
 	overflow-x: auto;
-	background-color: ${(props) => props.theme.primary}DD;
-	border: 2px solid ${(props) => props.theme.primary}DD;
+	border: 2px solid ${(props) => props.theme.primary};
 	transition: all 0.25s ease-in-out;
+	cursor: pointer;
 
 	display: flex;
 	flex-direction: column;
 
 	&:hover {
-		filter: drop-shadow(0 0 1rem ${(props) => props.theme.text}77);
-		border: 2px solid ${(props) => props.theme.primary};
+		filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.text}44);
+
+		.social-preview-container {
+			filter: drop-shadow(0 0 0.25rem ${(props) => props.theme.dark}77);
+			&::before {
+				opacity: 0;
+			}
+		}
 	}
 
 	${(props) =>
@@ -29,10 +35,6 @@ export const CardContainer = styled.div<CardContainerI>`
 			: `
 		@media screen and (min-width: 768px) {
 			flex-direction: row;
-	
-			&:nth-child(even) {
-				flex-direction: row-reverse;
-			}
 	
 			.social-preview-container {
 				flex: 1;
@@ -50,12 +52,14 @@ export const SocialPreviewContainer = styled.div.attrs({
 })`
 	width: 100%;
 	aspect-ratio: 2;
-	border-radius: calc(inherit - 0.25rem);
+	border-radius: 0.625rem;
+	outline: 2px solid ${(props) => props.theme.primary};
 	overflow: hidden;
 	position: relative;
+	transition: all 0.25s ease-in-out, height 0s;
 
 	img {
-		max-height: 100%;
+		max-width: 100%;
 		object-fit: cover;
 	}
 `;
@@ -64,7 +68,7 @@ export const DataContainer = styled.div.attrs({
 	className: "data-container",
 })`
 	width: auto;
-	padding: 1rem;
+	padding: 1rem 1.5rem;
 
 	display: flex;
 	flex-direction: column;
@@ -72,7 +76,7 @@ export const DataContainer = styled.div.attrs({
 	gap: 0.75rem;
 
 	* {
-		color: ${(props) => props.theme.primaryText};
+		color: ${(props) => props.theme.light};
 	}
 
 	.description {
@@ -94,11 +98,11 @@ export const ActionButton = styled.button`
 	max-width: 100%;
 	padding: 0.5rem;
 	border-radius: 0.25rem;
-	border: 1px solid ${(props) => props.theme.primaryText}DD;
+	border: 1px solid ${(props) => props.theme.light}DD;
 	background-color: transparent;
 	font-weight: bolder;
 	cursor: pointer;
-	color: ${(props) => props.theme.primaryText};
+	color: ${(props) => props.theme.light};
 
 	span {
 		max-width: 100%;
@@ -110,9 +114,9 @@ export const ActionButton = styled.button`
 	}
 
 	&:hover {
-		background-color: ${(props) => props.theme.primaryText}DD;
+		background-color: ${(props) => props.theme.light};
 		* {
-			color: ${(props) => props.theme.primary};
+			color: ${(props) => props.theme.color1};
 		}
 	}
 
@@ -124,25 +128,6 @@ export const ActionButton = styled.button`
 		span {
 			max-width: 0;
 		}
-	}
-`;
-
-export const LanguageContainer = styled.div.attrs({
-	className: "language-container",
-})`
-	padding: 0.5rem 1rem;
-	position: absolute;
-	background-color: ${(props) => props.theme.primary}CC;
-	border: 1px solid ${(props) => props.theme.primaryText}CC;
-	border-radius: 100rem;
-	user-select: none;
-
-	right: 1rem;
-	top: 1rem;
-
-	.language {
-		font-size: 0.85rem;
-		color: ${(props) => props.theme.primaryText};
 	}
 `;
 
