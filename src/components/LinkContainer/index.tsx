@@ -31,13 +31,13 @@ export function LinkContainerScroll(props: LinkContainerI) {
 	);
 }
 
-export function LinkContainerExternal(props: LinkContainerI) {
+export function LinkContainerExternal(props: LinkContainerI & { label?: string }) {
 	return (
 		<CustomLinkExternal
 			href={props.to}
 			rel="noopener noreferrer"
 			target="_blank"
-			aria-label={props.to}
+			aria-label={props.label ?? props.to}
 			onClick={props.$onClick}>
 			{props.children}
 		</CustomLinkExternal>

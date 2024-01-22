@@ -58,9 +58,15 @@ export const SocialPreviewContainer = styled.div.attrs({
 	position: relative;
 	transition: all 0.25s ease-in-out, height 0s;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
 	img {
-		max-width: 100%;
 		object-fit: cover;
+		min-width: 100%;
+		min-height: 100%;
 	}
 `;
 
@@ -73,10 +79,16 @@ export const DataContainer = styled.div.attrs({
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 0.75rem;
+	gap: 1rem;
 
 	* {
 		color: ${(props) => props.theme.light};
+	}
+
+	.name {
+		font-size: 1.25rem;
+		font-family: "Poppins", "Segoe UI", sans-serif !important;
+		font-weight: bolder;
 	}
 
 	.description {

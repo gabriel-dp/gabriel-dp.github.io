@@ -37,22 +37,21 @@ export default function RepoCard(props: RepoCardI) {
 				<SocialPreviewContainer>
 					<LazyLoadImage src={socialPreviewUrl} alt={props.repo.name} />
 				</SocialPreviewContainer>
-
 				<DataContainer>
 					<DataTextContainer>
-						<h4>{props.repo.name}</h4>
+						<p className="name">{props.repo.name}</p>
 						<p className="description">{props.repo.description}</p>
 					</DataTextContainer>
 					<ActionButtonsContainer>
 						<ActionButton>
-							<LinkContainerExternal to={props.repo.html_url}>
+							<LinkContainerExternal to={props.repo.html_url} label="source code">
 								<span>Code</span>
 								<FaCode className="icon" />
 							</LinkContainerExternal>
 						</ActionButton>
 						{props.repo.homepage != "" && (
 							<ActionButton>
-								<LinkContainerExternal to={props.repo.homepage}>
+								<LinkContainerExternal to={props.repo.homepage} label="live website">
 									<span>Website</span>
 									<FaLink className="icon" />
 								</LinkContainerExternal>
