@@ -25,13 +25,13 @@ export const CustomLinkRouter = styled(LinkRouter).attrs({
 `;
 
 export const CustomLinkScroll = styled(LinkScroll).attrs({
-	className: "link router",
+	className: "link scroll",
 })`
 	${CustomLink};
 `;
 
 export const CustomLinkExternal = styled.a.attrs({
-	className: "link router",
+	className: "link external",
 })`
 	${CustomLink};
 `;

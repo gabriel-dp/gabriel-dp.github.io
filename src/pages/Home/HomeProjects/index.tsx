@@ -1,14 +1,18 @@
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
-import { ProjectsSection } from "./styles";
+import RepoCard from "@/components/RepoCard";
+
+import { CardsContainer, ProjectsSection } from "./styles";
 
 export default function HomeProjects(props: { $id: string }) {
 	const repos = useGitHubRepos("main");
 
 	return (
 		<ProjectsSection id={props.$id}>
-			{repos.map((repo) => (
-				<p>{repo.name}</p>
-			))}
+			<CardsContainer>
+				{repos.map((repo) => (
+					<RepoCard key={repo.name} repo={repo} />
+				))}
+			</CardsContainer>
 		</ProjectsSection>
 	);
 }

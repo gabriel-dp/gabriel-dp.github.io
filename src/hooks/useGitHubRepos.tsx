@@ -5,11 +5,10 @@ import githubConfigs from "@/configs/github.json";
 
 export interface Repo {
 	description: string;
+	homepage: string;
 	html_url: string;
 	language: string;
 	name: string;
-	stargazers_count: number;
-	svn_url: string;
 	topics: string[];
 }
 
