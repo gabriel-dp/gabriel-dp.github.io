@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface CardContainerI {
-	layout: "horizontal" | "vertical";
+	$layout: "horizontal" | "vertical";
 }
 
 export const CardContainer = styled.div<CardContainerI>`
@@ -30,7 +30,7 @@ export const CardContainer = styled.div<CardContainerI>`
 	}
 
 	${(props) =>
-		props.layout != "horizontal"
+		props.$layout != "horizontal"
 			? ""
 			: `
 		@media screen and (min-width: 768px) {

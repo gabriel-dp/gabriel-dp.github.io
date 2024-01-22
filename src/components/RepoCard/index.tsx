@@ -28,12 +28,12 @@ export default function RepoCard(props: RepoCardI) {
 	return (
 		<GradientComponent
 			className="gradient"
-			direction={135}
+			direction={180}
 			colors={[
 				{ color: theme?.color1, position: 0 },
-				{ color: theme?.color2, position: 1 },
+				{ color: theme?.color2, position: 1.5 },
 			]}>
-			<CardContainer layout={props.layout} className="card">
+			<CardContainer $layout={props.layout} className="card">
 				<SocialPreviewContainer>
 					<LazyLoadImage src={socialPreviewUrl} alt={props.repo.name} />
 				</SocialPreviewContainer>
