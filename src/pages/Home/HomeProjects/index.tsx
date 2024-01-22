@@ -1,4 +1,5 @@
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
+import SectionTitle from "@/components/SectionTitle";
 import RepoCard from "@/components/RepoCard";
 
 import { CardsContainer, ProjectsSection, SeeMoreButton } from "./styles";
@@ -8,7 +9,7 @@ export default function HomeProjects(props: { $id: string }) {
 
 	return (
 		<ProjectsSection id={props.$id}>
-			<h2>Projects</h2>
+			<SectionTitle title="Projects" sub="My works" />
 			{status == "success" && (
 				<CardsContainer>
 					{repos.map((repo) => (

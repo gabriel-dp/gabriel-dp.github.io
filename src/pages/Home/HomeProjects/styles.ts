@@ -8,6 +8,14 @@ export const ProjectsSection = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
 `;
 
 export const CardsContainer = styled.div`
