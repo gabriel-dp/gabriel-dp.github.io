@@ -1,4 +1,4 @@
-import { useGitHubRepos } from "@/hooks/useGitHubRepos";
+import { githubService } from "@/services/githubService";
 import AsyncComponent from "@/components/AsyncComponent";
 import Section from "@/components/Section";
 import RepoCard from "@/components/RepoCard";
@@ -6,7 +6,7 @@ import RepoCard from "@/components/RepoCard";
 import { CardsContainer, SeeMoreButton } from "./styles";
 
 export default function HomeProjects(props: { $id: string }) {
-	const [repos, status] = useGitHubRepos("main");
+	const [repos, status] = githubService.Repos("main");
 
 	return (
 		<Section $id={props.$id} title="Projects" sub="My works">
