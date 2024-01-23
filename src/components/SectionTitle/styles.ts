@@ -25,17 +25,19 @@ export const TitleContainer = styled.div`
 		color: ${(props) => props.theme.secondary};
 	}
 
-	.line {
-		width: 80%;
-		margin: 0.5rem 0;
-		height: 0.125rem;
-		background-color: ${(props) => props.theme.primary};
-		border-radius: 100rem;
-	}
-
 	.title:hover,
 	.sub:hover {
 		letter-spacing: 0.1rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		.title {
+			font-size: 2rem;
+		}
+
+		.sub {
+			font-size: 1.15rem;
+		}
 	}
 `;
 

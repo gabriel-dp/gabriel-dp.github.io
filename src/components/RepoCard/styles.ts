@@ -6,11 +6,11 @@ interface CardContainerI {
 
 export const CardContainer = styled.div<CardContainerI>`
 	width: max(100%, 10rem);
+	min-width: 12rem;
 	height: auto;
 	flex-direction: column;
 	border-radius: 0.75rem;
 	overflow: hidden;
-	overflow-x: auto;
 	border: 2px solid ${(props) => props.theme.primary};
 	transition: all 0.25s ease-in-out;
 	cursor: pointer;
