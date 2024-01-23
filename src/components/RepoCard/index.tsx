@@ -2,7 +2,7 @@ import { FaCode, FaLink } from "react-icons/fa";
 
 import { useTheme } from "@/contexts/theme/useTheme";
 import githubConfig from "@/configs/github.json";
-import { Repo } from "@/hooks/useGitHubRepos";
+import { Repo } from "@/services/githubService";
 import { LinkContainerExternal } from "@/components/LinkContainer";
 import LazyLoadImage from "@/components/LazyLoadImage";
 import GradientComponent from "@/components/GradientComponent";
