@@ -11,8 +11,9 @@ export default function Footer() {
 				<AuthorContainer>
 					<div>
 						<p>
-							<span>Made with love and work by&nbsp;</span>
-							<span className="author">Gabriel de Paula</span>
+							<span>Made with love and work</span>
+							&nbsp;
+							<span className="author">by Gabriel de Paula</span>
 						</p>
 						<p>All rights reserved</p>
 					</div>
@@ -22,8 +23,8 @@ export default function Footer() {
 				</AuthorContainer>
 				<SocialContainer>
 					<SocialIconGithub />
-					<SocialIconInstagram />
 					<SocialIconLinkedin />
+					<SocialIconInstagram />
 				</SocialContainer>
 			</FooterWrapper>
 		</FooterContainer>

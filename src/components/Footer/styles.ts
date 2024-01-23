@@ -19,6 +19,11 @@ export const FooterWrapper = styled.div`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 1.5rem;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 export const AuthorContainer = styled.div`
@@ -61,11 +66,16 @@ export const AuthorContainer = styled.div`
 		flex-direction: column;
 		gap: 0.25rem;
 	}
+
+	@media screen and (max-width: 767px) {
+		align-items: center;
+		text-align: center;
+	}
 `;
 
 export const SocialContainer = styled.div`
-	width: auto;
 	font-size: 2rem;
+	width: max-content;
 
 	display: flex;
 	flex-direction: row;
