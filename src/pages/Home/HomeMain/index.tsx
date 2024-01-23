@@ -1,6 +1,6 @@
 import { useTheme } from "@/contexts/theme/useTheme";
 import GradientComponent from "@/components/GradientComponent";
-import TypeWriterComponent from "@/components/TypeWriterComponent";
+import TypeWriterComponent from "@/components/TypeWriter";
 import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/SocialIcons";
 
 import { MainSection, MainContainer, HorizontalLine, SocialContainer } from "./styles";

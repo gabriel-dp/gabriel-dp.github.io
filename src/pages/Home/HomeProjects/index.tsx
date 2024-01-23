@@ -1,4 +1,5 @@
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
+import AsyncComponent from "@/components/AsyncComponent";
 import Section from "@/components/Section";
 import RepoCard from "@/components/RepoCard";
 
@@ -9,13 +10,13 @@ export default function HomeProjects(props: { $id: string }) {
 
 	return (
 		<Section $id={props.$id} title="Projects" sub="My works">
-			{status == "success" && (
+			<AsyncComponent status={status}>
 				<CardsContainer>
 					{repos.map((repo) => (
 						<RepoCard key={repo.name} repo={repo} layout="horizontal" />
 					))}
 				</CardsContainer>
-			)}
+			</AsyncComponent>
 			<SeeMoreButton>More projects</SeeMoreButton>
 		</Section>
 	);

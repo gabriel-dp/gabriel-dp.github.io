@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const SectionContainer = styled.section`
 	border-top: 1px solid ${(props) => props.theme.secondary}77;
 	width: 100%;
-	padding: 1.5rem 1.5rem 3rem 1.5rem;
+	padding: 3rem 1.5rem 3rem 1.5rem;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2rem;
+	gap: 3rem;
 
 	h2 {
 		font-size: 2rem;
@@ -20,7 +20,6 @@ export const SectionContainer = styled.section`
 `;
 
 export const TitleContainer = styled.div`
-	padding: 2rem 0;
 	cursor: default;
 	position: relative;
 
