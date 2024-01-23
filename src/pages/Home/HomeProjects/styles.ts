@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectsSection = styled.section`
+	border-top: 1px solid ${(props) => props.theme.secondary}77;
 	width: 100%;
 	padding: 1.5rem;
 

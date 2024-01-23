@@ -4,7 +4,7 @@ import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
 
 export const MainSection = styled.section`
 	width: 100%;
-	min-height: calc(100svh - (${NAVBAR_HEIGHT_REM}rem + 1rem));
+	min-height: calc(100svh - (${NAVBAR_HEIGHT_REM}rem + 0rem));
 	padding: 0 1.25rem;
 
 	display: flex;

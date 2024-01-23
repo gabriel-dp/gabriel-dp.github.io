@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
 	width: 100dvw;
 	background-color: ${(props) => props.theme.background2};
-	border-top: 1px solid ${(props) => props.theme.primary};
+	border-top: 1px solid ${(props) => props.theme.secondary}77;
 
 	display: flex;
 	justify-content: center;
@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterWrapper = styled.div`
-	width: min(100%, 100rem);
+	width: min(100%, 75rem);
 	padding: 3rem min(3rem, 10%);
 
 	display: flex;
@@ -37,13 +37,18 @@ export const AuthorContainer = styled.div`
 		transition: all 0.25s ease-in-out;
 	}
 
-	p {
+	.author {
 		font-size: 1rem;
 
 		span {
 			white-space: nowrap;
 			display: inline-block;
 		}
+	}
+
+	.rights {
+		opacity: 0.75;
+		font-size: 0.875rem;
 	}
 
 	.source-code {

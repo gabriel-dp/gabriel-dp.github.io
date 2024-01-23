@@ -24,8 +24,9 @@ export function LinkContainerRouter(props: LinkContainerI & { top?: boolean }) {
 }
 
 export function LinkContainerScroll(props: LinkContainerI) {
+	const offset = -16 * NAVBAR_HEIGHT_REM - 0.5; // 1rem = 16px
 	return (
-		<CustomLinkScroll to={props.to} offset={-16 * (NAVBAR_HEIGHT_REM + 1)} smooth onClick={props.$onClick}>
+		<CustomLinkScroll to={props.to} offset={offset} smooth onClick={props.$onClick}>
 			{props.children}
 		</CustomLinkScroll>
 	);

@@ -10,12 +10,12 @@ export default function Footer() {
 			<FooterWrapper>
 				<AuthorContainer>
 					<div>
-						<p>
+						<p className="author">
 							<span>Made with love and work</span>
 							&nbsp;
-							<span className="author">by Gabriel de Paula</span>
+							<span>by Gabriel de Paula</span>
 						</p>
-						<p>All rights reserved</p>
+						<p className="rights">All rights reserved</p>
 					</div>
 					<button className="source-code">
 						<LinkContainerExternal to={githubConfigs.repo}>Website source code</LinkContainerExternal>
