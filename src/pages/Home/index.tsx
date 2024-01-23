@@ -1,5 +1,6 @@
 import PageWrapper from "@/components/PageWrapper";
 import Navbar, { NavButtonData } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 import HomeMain from "./HomeMain";
 import HomeProjects from "./HomeProjects";
@@ -20,6 +21,7 @@ export default function Home() {
 			{sections.map((section) => (
 				<section.component key={section.id} $id={section.id} />
 			))}
+			<Footer />
 		</PageWrapper>
 	);
 }

@@ -3,6 +3,7 @@
 	"topics": {
 		"normal": "portfolio",
 		"main": "portfolio-main"
-	}
+	},
+	"repo": "https://github.com/gabriel-dp/portfolio"
 }
 
