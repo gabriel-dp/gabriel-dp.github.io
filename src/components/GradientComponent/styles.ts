@@ -18,6 +18,9 @@ const styleTextGradient = css<ComponentContainerI>`
 
 export const ComponentContainer = styled.div<ComponentContainerI>`
 	align-self: stretch;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	& > * {
 		${(props) => (props.$text ? styleTextGradient : styleNormalGradient)};

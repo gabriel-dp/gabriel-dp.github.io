@@ -17,6 +17,7 @@ export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: 0;
 
 	* {
@@ -41,10 +42,6 @@ export const MainContainer = styled.div`
 		* {
 			color: ${(props) => props.theme.secondary};
 		}
-	}
-
-	.line {
-		margin: 1.25rem 0;
 	}
 
 	@media screen and (max-width: 767px) {
@@ -75,7 +72,7 @@ const lineAnimation = keyframes`
 
 export const HorizontalLine = styled.div`
 	height: 2px;
-	position: relative;
+	margin: 1.25rem 0;
 	background-color: ${(props) => props.theme.secondary};
 	border-radius: 100rem;
 	z-index: -1;

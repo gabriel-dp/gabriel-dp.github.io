@@ -6,6 +6,7 @@ export const ScreenBackground = styled.div`
 	height: 100lvh;
 	width: 100%;
 	position: fixed;
+	top: 0;
 	z-index: -1;
 `;
 
