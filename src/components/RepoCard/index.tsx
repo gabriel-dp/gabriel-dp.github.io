@@ -30,8 +30,8 @@ export default function RepoCard(props: RepoCardI) {
 			className="gradient"
 			direction={180}
 			colors={[
-				{ color: theme?.color1, position: 0 },
-				{ color: theme?.color2, position: 1.5 },
+				{ color: theme?.background1, position: -0.5 },
+				{ color: theme?.background2, position: 1.5 },
 			]}>
 			<CardContainer $layout={props.layout} className="card">
 				<SocialPreviewContainer>

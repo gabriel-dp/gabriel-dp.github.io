@@ -11,7 +11,7 @@ export const CardContainer = styled.div<CardContainerI>`
 	flex-direction: column;
 	border-radius: 0.75rem;
 	overflow: hidden;
-	border: 2px solid ${(props) => props.theme.primary};
+	border: 1px solid ${(props) => props.theme.primary};
 	transition: all 0.25s ease-in-out;
 	cursor: pointer;
 
@@ -53,7 +53,7 @@ export const SocialPreviewContainer = styled.div.attrs({
 	width: 100%;
 	aspect-ratio: 2;
 	border-radius: 0.625rem;
-	outline: 2px solid ${(props) => props.theme.primary};
+	outline: 1px solid ${(props) => props.theme.primary};
 	overflow: hidden;
 	position: relative;
 	transition: all 0.25s ease-in-out, height 0s;
@@ -82,7 +82,7 @@ export const DataContainer = styled.div.attrs({
 	gap: 1rem;
 
 	* {
-		color: ${(props) => props.theme.light};
+		color: ${(props) => props.theme.primary};
 	}
 
 	.name {
@@ -110,11 +110,11 @@ export const ActionButton = styled.button`
 	max-width: 100%;
 	padding: 0.5rem;
 	border-radius: 0.25rem;
-	border: 1px solid ${(props) => props.theme.light}DD;
+	border: 1px solid ${(props) => props.theme.primary}DD;
 	background-color: transparent;
 	font-weight: bolder;
 	cursor: pointer;
-	color: ${(props) => props.theme.light};
+	color: ${(props) => props.theme.primary};
 
 	span {
 		max-width: 100%;
@@ -126,9 +126,9 @@ export const ActionButton = styled.button`
 	}
 
 	&:hover {
-		background-color: ${(props) => props.theme.light};
+		background-color: ${(props) => props.theme.primary};
 		* {
-			color: ${(props) => props.theme.color1};
+			color: ${(props) => props.theme.primaryText};
 		}
 	}
 
