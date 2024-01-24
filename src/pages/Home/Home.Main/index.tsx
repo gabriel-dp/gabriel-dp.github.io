@@ -3,11 +3,12 @@ import GradientComponent from "@/components/GradientComponent";
 import TypeWriterComponent from "@/components/TypeWriter";
 import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/SocialIcons";
 
-import { MainSection, MainContainer, HorizontalLine, SocialContainer } from "./styles";
+import { MainSection, MainContainer, HorizontalLine, SocialContainer, ArrowDown, ArrowContainer } from "./styles";
+import { LinkContainerScroll } from "@/components/LinkContainer";
 
 const TYPEWRITER_STRINGS = ["Software Developer", "3D Modeler"];
 
-export default function HomeMain(props: { $id: string }) {
+export default function HomeMain(props: { $id: string; next: string }) {
 	const theme = useTheme();
 
 	return (
@@ -41,6 +42,11 @@ export default function HomeMain(props: { $id: string }) {
 					<SocialIconInstagram />
 				</SocialContainer>
 			</MainContainer>
+			<ArrowContainer>
+				<LinkContainerScroll to={props.next}>
+					<ArrowDown />
+				</LinkContainerScroll>
+			</ArrowContainer>
 		</MainSection>
 	);
 }

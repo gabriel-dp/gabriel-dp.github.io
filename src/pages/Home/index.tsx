@@ -25,7 +25,7 @@ export default function Home() {
 	return (
 		<PageWrapper>
 			<Navbar buttons={navButtons} />
-			<HomeMain $id="#home" />
+			<HomeMain $id="#home" next={sections[0].id} />
 			{sections.map((section) => (
 				<section.component key={section.id} $id={section.id} />
 			))}

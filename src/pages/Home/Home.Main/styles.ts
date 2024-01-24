@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { FaChevronDown } from "react-icons/fa";
 
 import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
 
@@ -6,6 +7,7 @@ export const MainSection = styled.section`
 	width: 100%;
 	min-height: calc(100svh - (${NAVBAR_HEIGHT_REM}rem + 0rem));
 	padding: 0 1.25rem;
+	position: relative;
 
 	display: flex;
 	flex-direction: column;
@@ -100,5 +102,53 @@ export const SocialContainer = styled.div`
 			filter: drop-shadow(0 0 1rem ${(props) => props.theme.primary}77);
 		}
 	}
+`;
+
+export const ArrowContainer = styled.button.attrs({
+	className: "arrow",
+})`
+	height: 3.5rem;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	bottom: 10%;
+	font-size: 1.75rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	&,
+	* {
+		color: ${(props) => props.theme.secondary};
+		transition: all 0.25s ease-in-out;
+	}
+
+	&:hover {
+		filter: drop-shadow(0 0 1rem ${(props) => props.theme.primary});
+		* {
+			color: ${(props) => props.theme.primary};
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		height: 3rem;
+		font-size: 1.5rem;
+	}
+`;
+
+const slideAnimation = keyframes`
+	0%, 100% {
+		transform: translateY(0);
+	}
+	
+	50% {
+		transform: translateY(100%);
+	}
+`;
+
+export const ArrowDown = styled(FaChevronDown)`
+	animation: ${slideAnimation} 3s ease-in-out infinite 2s;
 `;
 
