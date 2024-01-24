@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionContainer = styled.section`
 	border-top: 1px solid ${(props) => props.theme.secondary}77;
 	width: 100%;
-	padding: 3rem 1.5rem 3rem 1.5rem;
+	padding: 3rem max(1.5rem, calc(50% - 50rem));
 
 	display: flex;
 	flex-direction: column;
@@ -58,4 +58,3 @@ export const TitleContainer = styled.div`
 		}
 	}
 `;
-

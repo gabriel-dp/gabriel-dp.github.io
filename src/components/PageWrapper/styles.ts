@@ -11,7 +11,7 @@ export const ScreenBackground = styled.div`
 `;
 
 export const PageContainer = styled.div`
-	width: min(100%, 100rem);
+	width: 100%;
 	margin: 0 auto;
 	padding-top: ${NAVBAR_HEIGHT_REM}rem;
 
@@ -19,4 +19,3 @@ export const PageContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 `;
-

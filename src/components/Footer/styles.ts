@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-	width: 100dvw;
+	width: 100%;
 	background-color: ${(props) => props.theme.background2};
 	border-top: 1px solid ${(props) => props.theme.secondary}77;
 
@@ -102,4 +102,3 @@ export const SocialContainer = styled.div`
 		}
 	}
 `;
-
