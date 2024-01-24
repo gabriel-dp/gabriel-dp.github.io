@@ -2,18 +2,26 @@ import PageWrapper from "@/components/PageWrapper";
 import Navbar, { NavButtonData } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import HomeMain from "./HomeMain";
-import HomeProjects from "./HomeProjects";
+import HomeMain from "./Home.Main";
+import HomeAbout from "./Home.About";
+import HomeSkills from "./Home.Skills";
+import HomeContact from "./Home.Contact";
+import HomeProjects from "./Home.Projects";
 
 const sections: {
 	id: string;
 	text: string;
 	component: (props: { $id: string }) => JSX.Element;
-}[] = [{ id: "#projects", text: "Projects", component: HomeProjects }];
+}[] = [
+	{ id: "#about", text: "About", component: HomeAbout },
+	{ id: "#skills", text: "Skills", component: HomeSkills },
+	{ id: "#projects", text: "Projects", component: HomeProjects },
+	{ id: "#contact", text: "Contact", component: HomeContact },
+];
+
+const navButtons: NavButtonData[] = sections.map((section) => ({ text: section.text, to: section.id }));
 
 export default function Home() {
-	const navButtons: NavButtonData[] = sections.map((section) => ({ text: section.text, to: section.id }));
-
 	return (
 		<PageWrapper>
 			<Navbar buttons={navButtons} />
