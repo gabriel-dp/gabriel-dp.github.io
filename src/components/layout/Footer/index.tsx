@@ -11,7 +11,7 @@ export default function Footer() {
 				<AuthorContainer>
 					<div>
 						<p className="author">
-							<span>Made with love and work</span>
+							<span>Made with ♡</span>
 							&nbsp;
 							<span>by Gabriel de Paula</span>
 						</p>
