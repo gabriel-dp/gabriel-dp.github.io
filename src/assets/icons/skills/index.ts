@@ -4,7 +4,7 @@ import Javascript from "./javascript.svg?react";
 import Java from "./java.svg?react";
 import Python from "./python.svg?react";
 import C from "./c.svg?react";
-import Cplusplus from "./Cplusplus.svg?react";
+import Cplusplus from "./cplusplus.svg?react";
 import Csharp from "./csharp.svg?react";
 import Html from "./html.svg?react";
 import Css from "./css.svg?react";
