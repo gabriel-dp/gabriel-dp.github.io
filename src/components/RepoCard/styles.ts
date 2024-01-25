@@ -14,6 +14,7 @@ export const CardContainer = styled.div<CardContainerI>`
 	border: 1px solid ${(props) => props.theme.primary};
 	transition: all 0.25s ease-in-out;
 	cursor: pointer;
+	background-color: ${(props) => props.theme.primary}11;
 
 	display: flex;
 	flex-direction: column;
@@ -148,4 +149,3 @@ export const DataTextContainer = styled.div`
 	flex-direction: column;
 	gap: 1rem;
 `;
-

@@ -30,26 +30,31 @@ export const CardsContainer = styled.div`
 	@media screen and (min-width: 768px) {
 		width: min(100%, 50rem);
 
-		.gradient:nth-child(even) > .card {
+		.card:nth-child(even) {
 			flex-direction: row-reverse;
 		}
 
-		.gradient:nth-child(even) {
+		> :nth-child(even) {
 			margin-left: 5%;
 		}
 
-		.gradient:nth-child(odd) {
+		> :nth-child(odd) {
 			margin-right: 5%;
 		}
 	}
 `;
 
-export const SeeMoreButton = styled.div`
+export const SeeMoreButton = styled.button`
 	padding: 0.5rem 1.5rem;
-	border-radius: 100rem;
-	background-color: ${(props) => props.theme.primary};
-	color: ${(props) => props.theme.primaryText};
+	border-radius: 0.5rem;
+	border: 1px solid ${(props) => props.theme.primary};
+	background-color: ${(props) => props.theme.color1}00;
+	color: ${(props) => props.theme.primary};
 	user-select: none;
 	cursor: pointer;
-`;
 
+	&:hover {
+		background-color: ${(props) => props.theme.primary};
+		color: ${(props) => props.theme.background1};
+	}
+`;
