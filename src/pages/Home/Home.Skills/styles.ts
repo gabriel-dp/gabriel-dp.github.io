@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const detailsShow = keyframes`
+	from {
+		opacity:0;
+		transform: var(--details-translate, translateY(-0.5rem));
+	}
+`;
 
 export const CategoryContainer = styled.details`
 	width: min(100%, 50rem);
@@ -15,6 +22,10 @@ export const CategoryContainer = styled.details`
 	* {
 		transition: all 0.25s ease-in-out;
 		user-select: none;
+	}
+
+	&[open] > *:not(summary) {
+		animation: ${detailsShow} 0.25s ease-in-out;
 	}
 `;
 
@@ -102,3 +113,4 @@ export const SingleSkill = styled.div`
 		}
 	}
 `;
+

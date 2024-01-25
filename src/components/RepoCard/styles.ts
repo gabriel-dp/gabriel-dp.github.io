@@ -20,7 +20,7 @@ export const CardContainer = styled.div<CardContainerI>`
 	flex-direction: column;
 
 	&:hover {
-		filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.text}44);
+		filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.text}33);
 
 		.social-preview-container {
 			filter: drop-shadow(0 0 0.25rem ${(props) => props.theme.dark}77);
@@ -149,3 +149,4 @@ export const DataTextContainer = styled.div`
 	flex-direction: column;
 	gap: 1rem;
 `;
+
