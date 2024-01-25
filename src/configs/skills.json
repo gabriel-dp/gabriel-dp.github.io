@@ -1,7 +1,24 @@
 {
 	"languages": [
-		{ "name": "TypeScript", "link": "https://cdn.svgporn.com/logos/typescript-icon.svg" },
-		{ "name": "JavaScript", "link": "https://cdn.svgporn.com/logos/javascript.svg" }
+		{ "name": "TypeScript", "asset": "Typescript" },
+		{ "name": "JavaScript", "asset": "Javascript" },
+		{ "name": "Java", "asset": "Java" },
+		{ "name": "Python", "asset": "Python" },
+		{ "name": "C", "asset": "C" },
+		{ "name": "C++", "asset": "Cplusplus" },
+		{ "name": "C#", "asset": "Csharp" },
+		{ "name": "HTML", "asset": "Html" },
+		{ "name": "CSS", "asset": "Css" }
+	],
+	"frameworks&libs": [
+		{ "name": "React", "asset": "React" },
+		{ "name": "Three.js", "asset": "Threejs" },
+		{ "name": "Selenium", "asset": "Selenium" }
+	],
+	"others": [
+		{ "name": "Node.js", "asset": "Nodejs" },
+		{ "name": "MySQL", "asset": "Mysql" },
+		{ "name": "MongoDB", "asset": "Mongodb" },
+		{ "name": "Git", "asset": "Git" }
 	]
 }
-

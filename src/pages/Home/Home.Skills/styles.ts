@@ -1,61 +1,104 @@
 import styled from "styled-components";
 
-export const CategoryContainer = styled.div`
+export const CategoryContainer = styled.details`
 	width: min(100%, 50rem);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	border: 1px solid ${(props) => props.theme.primary};
+	background-color: ${(props) => props.theme.primary}11;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
 
 	* {
 		transition: all 0.25s ease-in-out;
-	}
-
-	h3 {
-		font-size: 1.5rem;
-		color: ${(props) => props.theme.primary};
-	}
-
-	@media screen and (max-width: 767px) {
-		h3 {
-			font-size: 1.25rem;
-		}
+		user-select: none;
 	}
 `;
 
-export const SkillsContainer = styled.div`
-	width: max-content;
-	padding: 1.5rem 3rem;
-	border-radius: 0.5rem;
-	border: 1px solid ${(props) => props.theme.primary};
-	background-color: ${(props) => props.theme.primary}11;
+export const CategoryHeader = styled.summary`
+	padding: 0.5rem;
+	list-style: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+	.title {
+		text-align: center;
+		font-size: 1.25rem;
+		color: ${(props) => props.theme.primary};
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		width: 0.75em;
+		height: 0.15rem;
+		background-color: ${(props) => props.theme.primary};
+		position: absolute;
+		top: calc(50% - 0.125rem);
+		right: 0;
+		transition: all 0.25s ease-in-out;
+	}
+
+	&::after {
+		transform: rotate(90deg);
+		transform-origin: 50% 50%;
+	}
+	[open] &::after {
+		transform: rotate(0deg);
+	}
+`;
+
+export const SkillsWrapper = styled.div`
+	padding: 1rem 0;
 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 3rem;
+	row-gap: 1.5rem;
 `;
 
 export const SingleSkill = styled.div`
-	height: 4rem;
-	//filter: drop-shadow(0 0 0.25rem ${(props) => props.theme.text}AA);
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 0.5rem;
 
-	div {
-		height: calc(100% - 1rem);
-		aspect-ratio: 1;
+	.logo {
+		width: 3rem;
+		height: 3rem;
 
-		img {
-			aspect-ratio: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			max-width: 100%;
 			max-height: 100%;
+
+			* {
+				transition: none;
+				fill: ${(props) => props.theme.primary};
+			}
+		}
+	}
+
+	.name {
+		font-size: 0.75rem;
+		transition: all 0.25s ease-in-out;
+	}
+
+	&:hover {
+		.logo {
+			svg {
+				transform: scale(1.1);
+			}
 		}
 	}
 `;
-
