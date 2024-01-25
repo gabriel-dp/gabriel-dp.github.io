@@ -77,12 +77,13 @@ export const DataContainer = styled.div.attrs({
 	className: "data-container",
 })`
 	width: auto;
+	flex: 1;
 	padding: 1rem 1.5rem;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 1rem;
+	gap: 2rem;
 
 	* {
 		color: ${(props) => props.theme.primary};
@@ -112,7 +113,11 @@ export const ActionButton = styled(Button)`
 	flex: 1;
 	max-width: 100%;
 	font-size: 0.75rem;
-	padding: 0.75rem 1rem;
+
+	.link {
+		padding: 0.75rem;
+		gap: 0.25rem;
+	}
 
 	span {
 		max-width: 100%;

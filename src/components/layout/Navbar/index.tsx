@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBars as MenuIcon, FaTimes as CloseIcon } from "react-icons/fa";
 
-import Page from "@/pages/Page";
+import { Page } from "@/pages";
 import { useTheme } from "@/contexts/theme/useTheme";
 import { LinkComponentRouter, LinkComponentScroll } from "@/components/utilities/LinkComponent";
 import ThemeSwitch from "@/components/others/ThemeSwitch";

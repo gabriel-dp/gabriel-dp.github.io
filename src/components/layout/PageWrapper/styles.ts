@@ -12,11 +12,16 @@ export const ScreenBackground = styled.div`
 
 export const PageContainer = styled.div`
 	width: 100%;
+	min-height: 100dvh;
 	margin: 0 auto;
 	padding-top: ${NAVBAR_HEIGHT_REM}rem;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	footer {
+		margin-top: auto;
+	}
 `;
 

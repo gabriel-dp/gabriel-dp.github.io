@@ -2,6 +2,8 @@ import { githubService } from "@/services/githubService";
 import AsyncComponent from "@/components/utilities/AsyncComponent";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import RepoCard from "@/components/others/RepoCard";
+import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
+import { Page } from "@/pages";
 
 import { CardsContainer, SeeMoreButton } from "./styles";
 
@@ -17,7 +19,9 @@ export default function HomeProjects(props: { $id: string }) {
 					))}
 				</CardsContainer>
 			</AsyncComponent>
-			<SeeMoreButton>More projects</SeeMoreButton>
+			<SeeMoreButton>
+				<LinkComponentRouter to={Page.Projetcs}>More projects</LinkComponentRouter>
+			</SeeMoreButton>
 		</SectionWrapper>
 	);
 }
