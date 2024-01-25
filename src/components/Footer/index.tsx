@@ -18,7 +18,9 @@ export default function Footer() {
 						<p className="rights">All rights reserved</p>
 					</div>
 					<button className="source-code">
-						<LinkContainerExternal to={githubConfigs.repo}>Website source code</LinkContainerExternal>
+						<LinkContainerExternal to={githubConfigs.repo} label="Website source code">
+							Website source code
+						</LinkContainerExternal>
 					</button>
 				</AuthorContainer>
 				<SocialContainer>

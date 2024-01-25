@@ -42,7 +42,7 @@ export default function HomeMain(props: { $id: string; next: string }) {
 					<SocialIconInstagram />
 				</SocialContainer>
 			</MainContainer>
-			<ArrowContainer>
+			<ArrowContainer aria-label="next-section">
 				<LinkContainerScroll to={props.next}>
 					<ArrowDown />
 				</LinkContainerScroll>
