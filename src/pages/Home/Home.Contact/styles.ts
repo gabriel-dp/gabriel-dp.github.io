@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Button from "@/components/layout/Button";
+
 export const TextContainer = styled.div`
 	text-align: center;
 
@@ -39,7 +41,7 @@ export const InputContainer = styled.div`
 		border-radius: 0.5rem;
 		font-size: 1rem;
 		border: 1px solid ${(props) => props.theme.primary};
-		background-color: ${(props) => props.theme.primary}22;
+		background-color: ${(props) => props.theme.primary}11;
 	}
 
 	input[type="text"] {
@@ -87,40 +89,14 @@ export const InputContainer = styled.div`
 	}
 `;
 
-export const SubmitButton = styled.button.attrs({
+export const SubmitButton = styled(Button).attrs({
 	type: "submit",
 })`
-	padding: 0.75rem 1.75rem;
-	border-radius: 100rem;
-	border: 1px solid ${(props) => props.theme.primary};
-	background-color: ${(props) => props.theme.primary}11;
-	font-size: 1rem;
-	cursor: pointer;
-
-	&,
-	* {
-		transition: all 0.25s ease-in-out;
-		color: ${(props) => props.theme.primary};
-	}
-
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 0.75rem;
-
 	.icon {
 		transform: translate(0, 0);
 	}
 
 	&:hover {
-		background-color: ${(props) => props.theme.primary};
-		filter: drop-shadow(0 0 0.5rem ${(props) => props.theme.primary}AA);
-
-		* {
-			color: ${(props) => props.theme.primaryText};
-		}
-
 		.icon {
 			transform: translate(0.1rem, -0.1rem);
 		}

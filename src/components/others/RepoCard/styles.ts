@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Button from "@/components/layout/Button";
+
 interface CardContainerI {
 	$layout: "horizontal" | "vertical";
 }
@@ -106,16 +108,11 @@ export const ActionButtonsContainer = styled.div`
 	gap: 1rem;
 `;
 
-export const ActionButton = styled.button`
+export const ActionButton = styled(Button)`
 	flex: 1;
 	max-width: 100%;
-	padding: 0.5rem;
-	border-radius: 0.25rem;
-	border: 1px solid ${(props) => props.theme.primary}DD;
-	background-color: transparent;
-	font-weight: bolder;
-	cursor: pointer;
-	color: ${(props) => props.theme.primary};
+	font-size: 0.75rem;
+	padding: 0.75rem 1rem;
 
 	span {
 		max-width: 100%;
@@ -124,13 +121,6 @@ export const ActionButton = styled.button`
 		overflow: hidden;
 		text-overflow: ellipsis;
 		transition: max-width 0.25s ease-in-out;
-	}
-
-	&:hover {
-		background-color: ${(props) => props.theme.primary};
-		* {
-			color: ${(props) => props.theme.primaryText};
-		}
 	}
 
 	.icon {

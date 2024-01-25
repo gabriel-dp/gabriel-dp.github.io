@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Button from "@/components/layout/Button";
+
 export const ProjectsSection = styled.section`
 	border-top: 1px solid ${(props) => props.theme.secondary}77;
 	width: 100%;
@@ -45,18 +47,5 @@ export const CardsContainer = styled.div`
 	}
 `;
 
-export const SeeMoreButton = styled.button`
-	padding: 0.5rem 1.5rem;
-	border-radius: 0.5rem;
-	border: 1px solid ${(props) => props.theme.primary};
-	background-color: ${(props) => props.theme.color1}00;
-	color: ${(props) => props.theme.primary};
-	user-select: none;
-	cursor: pointer;
-
-	&:hover {
-		background-color: ${(props) => props.theme.primary};
-		color: ${(props) => props.theme.background1};
-	}
-`;
+export const SeeMoreButton = styled(Button)``;
 
