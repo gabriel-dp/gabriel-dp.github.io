@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { FaChevronDown } from "react-icons/fa";
 
-import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
+import { NAVBAR_HEIGHT_REM } from "@/components/layout/Navbar";
 
 export const MainSection = styled.section`
 	width: 100%;
@@ -107,13 +107,13 @@ export const SocialContainer = styled.div`
 export const ArrowContainer = styled.button.attrs({
 	className: "arrow",
 })`
-	height: 3.5rem;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
 	position: absolute;
 	bottom: 10%;
 	font-size: 1.75rem;
+	padding-bottom: 1.75rem;
 
 	display: flex;
 	justify-content: center;
@@ -135,6 +135,7 @@ export const ArrowContainer = styled.button.attrs({
 	@media screen and (max-width: 767px) {
 		height: 3rem;
 		font-size: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 `;
 

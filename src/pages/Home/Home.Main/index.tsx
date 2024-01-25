@@ -1,10 +1,10 @@
 import { useTheme } from "@/contexts/theme/useTheme";
-import GradientComponent from "@/components/GradientComponent";
-import TypeWriterComponent from "@/components/TypeWriter";
-import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/SocialIcons";
+import GradientComponent from "@/components/utilities/GradientComponent";
+import TypeWriterComponent from "@/components/others/TypeWriter";
+import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/icons/SocialIcons";
+import { LinkComponentScroll } from "@/components/utilities/LinkComponent";
 
 import { MainSection, MainContainer, HorizontalLine, SocialContainer, ArrowDown, ArrowContainer } from "./styles";
-import { LinkContainerScroll } from "@/components/LinkContainer";
 
 const TYPEWRITER_STRINGS = ["Software Developer", "3D Modeler"];
 
@@ -43,9 +43,9 @@ export default function HomeMain(props: { $id: string; next: string }) {
 				</SocialContainer>
 			</MainContainer>
 			<ArrowContainer aria-label="next-section">
-				<LinkContainerScroll to={props.next}>
+				<LinkComponentScroll to={props.next}>
 					<ArrowDown />
-				</LinkContainerScroll>
+				</LinkComponentScroll>
 			</ArrowContainer>
 		</MainSection>
 	);

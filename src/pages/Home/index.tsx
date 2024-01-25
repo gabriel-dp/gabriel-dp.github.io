@@ -1,6 +1,6 @@
-import PageWrapper from "@/components/PageWrapper";
-import Navbar, { NavButtonData } from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import PageWrapper from "@/components/layout/PageWrapper";
+import Navbar, { NavButtonData } from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 import HomeMain from "./Home.Main";
 import HomeAbout from "./Home.About";

@@ -30,16 +30,17 @@ export const CardsContainer = styled.div`
 	@media screen and (min-width: 768px) {
 		width: min(100%, 50rem);
 
-		.card:nth-child(even) {
-			flex-direction: row-reverse;
-		}
+		.card {
+			width: 95%;
 
-		> :nth-child(even) {
-			margin-left: 5%;
-		}
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+				margin-left: 5%;
+			}
 
-		> :nth-child(odd) {
-			margin-right: 5%;
+			&:nth-child(odd) {
+				margin-right: 5%;
+			}
 		}
 	}
 `;
@@ -58,3 +59,4 @@ export const SeeMoreButton = styled.button`
 		color: ${(props) => props.theme.background1};
 	}
 `;
+

@@ -1,6 +1,6 @@
 import skills from "@/configs/skills.json";
-import Section from "@/components/Section";
-import SkillIcon from "@/components/SkillIcon";
+import SectionWrapper from "@/components/layout/SectionWrapper";
+import SkillIcon from "@/components/icons/SkillIcon";
 
 import { CategoryContainer, CategoryHeader, SingleSkill, SkillsWrapper } from "./styles";
 
@@ -26,10 +26,11 @@ function Category(props: { title: string; param: keyof typeof skills }) {
 
 export default function HomeSkills(props: { $id: string }) {
 	return (
-		<Section $id={props.$id} title="Skills" sub="Tools I use to work">
+		<SectionWrapper $id={props.$id} title="Skills" sub="Tools I use to work">
 			<Category title="Languages" param="languages" />
 			<Category title="Frameworks & Libs" param="frameworks&libs" />
 			<Category title="Others" param="others" />
-		</Section>
+		</SectionWrapper>
 	);
 }
+

@@ -1,6 +1,6 @@
 import githubConfigs from "@/configs/github.json";
-import { LinkContainerExternal } from "@/components/LinkContainer";
-import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/SocialIcons";
+import { LinkComponentExternal } from "@/components/utilities/LinkComponent";
+import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/icons/SocialIcons";
 
 import { AuthorContainer, FooterContainer, FooterWrapper, SocialContainer } from "./styles";
 
@@ -18,9 +18,9 @@ export default function Footer() {
 						<p className="rights">All rights reserved</p>
 					</div>
 					<button className="source-code">
-						<LinkContainerExternal to={githubConfigs.repo} label="Website source code">
+						<LinkComponentExternal to={githubConfigs.repo} label="Website source code">
 							Website source code
-						</LinkContainerExternal>
+						</LinkComponentExternal>
 					</button>
 				</AuthorContainer>
 				<SocialContainer>

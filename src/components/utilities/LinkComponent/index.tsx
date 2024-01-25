@@ -1,16 +1,16 @@
 import { animateScroll } from "react-scroll";
 
-import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
+import { NAVBAR_HEIGHT_REM } from "@/components/layout/Navbar";
 
 import { CustomLinkExternal, CustomLinkRouter, CustomLinkScroll } from "./styles";
 
-interface LinkContainerI {
+interface LinkComponentI {
 	to: string;
 	children: React.ReactNode;
 	$onClick?: () => void;
 }
 
-export function LinkContainerRouter(props: LinkContainerI & { top?: boolean }) {
+export function LinkComponentRouter(props: LinkComponentI & { top?: boolean }) {
 	function handleClick() {
 		if (props.top) animateScroll.scrollToTop();
 		if (props.$onClick) props.$onClick();
@@ -23,7 +23,7 @@ export function LinkContainerRouter(props: LinkContainerI & { top?: boolean }) {
 	);
 }
 
-export function LinkContainerScroll(props: LinkContainerI) {
+export function LinkComponentScroll(props: LinkComponentI) {
 	const offset = -16 * NAVBAR_HEIGHT_REM - 0.5; // 1rem = 16px
 	return (
 		<CustomLinkScroll to={props.to} offset={offset} smooth onClick={props.$onClick}>
@@ -32,7 +32,7 @@ export function LinkContainerScroll(props: LinkContainerI) {
 	);
 }
 
-export function LinkContainerExternal(props: LinkContainerI & { label?: string }) {
+export function LinkComponentExternal(props: LinkComponentI & { label?: string }) {
 	return (
 		<CustomLinkExternal
 			href={props.to}

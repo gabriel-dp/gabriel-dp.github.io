@@ -1,16 +1,16 @@
 import { useTheme } from "@/contexts/theme/useTheme";
-import GradientComponent from "@/components/GradientComponent";
+import GradientComponent from "@/components/utilities/GradientComponent";
 
 import { SectionContainer, TitleContainer } from "./styles";
 
-interface SectionI {
+interface SectionWrapperI {
 	$id: string;
 	title?: string;
 	sub?: string;
 	children: React.ReactNode;
 }
 
-export default function Section(props: SectionI) {
+export default function SectionWrapper(props: SectionWrapperI) {
 	const theme = useTheme();
 
 	return (

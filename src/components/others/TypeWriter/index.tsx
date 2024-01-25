@@ -1,15 +1,15 @@
-import TypeWriter from "typewriter-effect";
+import { default as TypeWriterComponent } from "typewriter-effect";
 import { TextContainer } from "./styles";
 
-interface TypeWriterComponentI {
+interface TypeWriterI {
 	strings: string[];
 	$className?: string;
 }
 
-export default function TypeWriterComponent(props: TypeWriterComponentI) {
+export default function TypeWriter(props: TypeWriterI) {
 	return (
 		<TextContainer className={props.$className}>
-			<TypeWriter
+			<TypeWriterComponent
 				options={{
 					strings: props.strings,
 					autoStart: true,

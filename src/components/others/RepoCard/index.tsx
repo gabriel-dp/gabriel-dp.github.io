@@ -2,8 +2,8 @@ import { FaCode, FaLink } from "react-icons/fa";
 
 import githubConfig from "@/configs/github.json";
 import { Repo } from "@/services/githubService";
-import { LinkContainerExternal } from "@/components/LinkContainer";
-import LazyLoadImage from "@/components/LazyLoadImage";
+import { LinkComponentExternal } from "@/components/utilities/LinkComponent";
+import LazyLoadImage from "@/components/utilities/LazyLoadImage";
 
 import {
 	ActionButton,
@@ -34,17 +34,17 @@ export default function RepoCard(props: RepoCardI) {
 				</DataTextContainer>
 				<ActionButtonsContainer>
 					<ActionButton>
-						<LinkContainerExternal to={props.repo.html_url} label="source code">
+						<LinkComponentExternal to={props.repo.html_url} label="source code">
 							<span>Code</span>
 							<FaCode className="icon" />
-						</LinkContainerExternal>
+						</LinkComponentExternal>
 					</ActionButton>
 					{props.repo.homepage != "" && (
 						<ActionButton>
-							<LinkContainerExternal to={props.repo.homepage} label="live website">
+							<LinkComponentExternal to={props.repo.homepage} label="live website">
 								<span>Website</span>
 								<FaLink className="icon" />
-							</LinkContainerExternal>
+							</LinkComponentExternal>
 						</ActionButton>
 					)}
 				</ActionButtonsContainer>
@@ -52,3 +52,4 @@ export default function RepoCard(props: RepoCardI) {
 		</CardContainer>
 	);
 }
+

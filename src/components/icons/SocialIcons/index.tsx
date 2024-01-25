@@ -2,7 +2,7 @@ import { IconType } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import socialConfigs from "@/configs/social.json";
-import { LinkContainerExternal } from "@/components/LinkContainer";
+import { LinkComponentExternal } from "@/components/utilities/LinkComponent";
 
 interface IconProps {
 	link: string;
@@ -11,9 +11,9 @@ interface IconProps {
 
 function SocialIcon(props: IconProps) {
 	return (
-		<LinkContainerExternal to={props.link}>
+		<LinkComponentExternal to={props.link}>
 			<props.icon className="social-icon" />
-		</LinkContainerExternal>
+		</LinkComponentExternal>
 	);
 }
 

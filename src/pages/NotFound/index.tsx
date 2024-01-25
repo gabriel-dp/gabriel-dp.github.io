@@ -1,5 +1,5 @@
-import PageWrapper from "@/components/PageWrapper";
-import Navbar from "@/components/Navbar";
+import PageWrapper from "@/components/layout/PageWrapper";
+import Navbar from "@/components/layout/Navbar";
 
 export default function NotFound() {
 	return (

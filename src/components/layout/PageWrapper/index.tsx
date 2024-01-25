@@ -1,5 +1,5 @@
 import { useTheme } from "@/contexts/theme/useTheme";
-import GradientComponent from "@/components/GradientComponent";
+import GradientComponent from "@/components/utilities/GradientComponent";
 
 import { PageContainer, ScreenBackground } from "./styles";
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { NAVBAR_HEIGHT_REM } from "@/components/Navbar";
+import { NAVBAR_HEIGHT_REM } from "@/components/layout/Navbar";
 
 export const ScreenBackground = styled.div`
 	height: 100lvh;
@@ -19,3 +19,4 @@ export const PageContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 `;
+

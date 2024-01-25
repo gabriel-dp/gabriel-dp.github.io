@@ -3,8 +3,8 @@ import { FaBars as MenuIcon, FaTimes as CloseIcon } from "react-icons/fa";
 
 import Page from "@/pages/Page";
 import { useTheme } from "@/contexts/theme/useTheme";
-import { LinkContainerRouter, LinkContainerScroll } from "@/components/LinkContainer";
-import ThemeSwitch from "@/components/ThemeSwitch";
+import { LinkComponentRouter, LinkComponentScroll } from "@/components/utilities/LinkComponent";
+import ThemeSwitch from "@/components/others/ThemeSwitch";
 
 import { MainButton, MenuButton, NavbarButton, NavbarHeader, NavbarList, NavbarNav, NavbarWrapper } from "./styles";
 
@@ -53,9 +53,9 @@ export default function Navbar(props: NavbarI) {
 		<NavbarHeader height={NAVBAR_HEIGHT_REM} $isAtTop={isAtTop}>
 			<NavbarWrapper>
 				<MainButton aria-label="home-button">
-					<LinkContainerRouter to={Page.Home} top $onClick={closeMenu}>
+					<LinkComponentRouter to={Page.Home} top $onClick={closeMenu}>
 						<img src={theme?.logo} alt="dp" />
-					</LinkContainerRouter>
+					</LinkComponentRouter>
 				</MainButton>
 				{props.buttons && props.buttons.length > 0 ? (
 					<>
@@ -64,9 +64,9 @@ export default function Navbar(props: NavbarI) {
 								{props.buttons.map((button) => (
 									<li key={button.text}>
 										<NavbarButton>
-											<LinkContainerScroll to={button.to} $onClick={closeMenu}>
+											<LinkComponentScroll to={button.to} $onClick={closeMenu}>
 												<span>{button.text}</span>
-											</LinkContainerScroll>
+											</LinkComponentScroll>
 										</NavbarButton>
 									</li>
 								))}
