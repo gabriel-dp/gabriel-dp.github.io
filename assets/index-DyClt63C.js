@@ -639,7 +639,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 	}
 `,O6=X(j4)`
 	animation: ${T6} 3s ease-in-out infinite 2s;
-`,R6=["Software Developer","3D Modeler"];function z6(e){const t=sa();return w.jsxs(_6,{id:e.$id,children:[w.jsxs(E6,{children:[w.jsx(Rl,{className:"title",direction:150,colors:[{color:t==null?void 0:t.primary,position:0},{color:t==null?void 0:t.secondary,position:1}],text:!0,children:w.jsxs("h1",{children:[w.jsx("span",{children:"Gabriel"})," ",w.jsx("span",{children:"de Paula"})]})}),w.jsx(S6,{strings:R6,$className:"typewriter"}),w.jsx(Rl,{className:"line",direction:45,colors:[{color:t==null?void 0:t.primary,position:0},{color:t==null?void 0:t.secondary,position:1}],children:w.jsx(C6,{})}),w.jsxs(P6,{className:"social",children:[w.jsx(Eh,{}),w.jsx(kh,{}),w.jsx(Ch,{})]})]}),w.jsx(j6,{"aria-label":"next-section",children:w.jsx(xh,{to:e.next,children:w.jsx(O6,{})})})]})}const N6="2004-06-19T03:00:00.000Z",$6={birthdate:N6},L6=1e3*60*60*24*365.25,M6=(e,t=new Date)=>Math.floor((t.getTime()-e.getTime())/L6),b6="https://gabriel-dp.github.io/assets/me-JBkFsdwe.png",A6=X.section`
+`,R6=["Software Developer","3D Modeler"];function z6(e){const t=sa();return w.jsxs(_6,{id:e.$id,children:[w.jsxs(E6,{children:[w.jsx(Rl,{className:"title",direction:150,colors:[{color:t==null?void 0:t.primary,position:0},{color:t==null?void 0:t.secondary,position:1}],text:!0,children:w.jsxs("h1",{children:[w.jsx("span",{children:"Gabriel"})," ",w.jsx("span",{children:"de Paula"})]})}),w.jsx(S6,{strings:R6,$className:"typewriter"}),w.jsx(Rl,{className:"line",direction:45,colors:[{color:t==null?void 0:t.primary,position:0},{color:t==null?void 0:t.secondary,position:1}],children:w.jsx(C6,{})}),w.jsxs(P6,{className:"social",children:[w.jsx(Eh,{}),w.jsx(kh,{}),w.jsx(Ch,{})]})]}),w.jsx(j6,{"aria-label":"next-section",children:w.jsx(xh,{to:e.next,children:w.jsx(O6,{})})})]})}const N6="2004-06-19T03:00:00.000Z",$6={birthdate:N6},L6=1e3*60*60*24*365.25,M6=(e,t=new Date)=>Math.floor((t.getTime()-e.getTime())/L6),b6=""+new URL("me-JBkFsdwe.png",import.meta.url).href,A6=X.section`
 	border-top: 1px solid ${e=>e.theme.secondary}77;
 	width: 100%;
 	padding: 3rem max(1.5rem, calc(50% - 50rem));
@@ -1210,7 +1210,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		height: 100%;
 		margin: auto;
 	}
-`;function o7(){const[e,t]=bh.Repos("normal");return w.jsxs(ga,{children:[w.jsx(Oc,{}),w.jsxs(oo,{$id:"projects",title:"Projects",sub:"Some of my works",children:[w.jsx(Ah,{status:t,children:w.jsx(i7,{children:e.map(n=>w.jsx(Ih,{repo:n,layout:"vertical"},n.name))})}),w.jsx(lo,{children:w.jsxs(Ui,{to:nr.github,label:"projects github",children:[w.jsx("span",{children:"See projects on GitHub"}),w.jsx(X0,{})]})})]}),w.jsx(Ph,{})]})}const l7="https://gabriel-dp.github.io/assets/resume-eQzQPRv0.pdf",a7=X.object`
+`;function o7(){const[e,t]=bh.Repos("normal");return w.jsxs(ga,{children:[w.jsx(Oc,{}),w.jsxs(oo,{$id:"projects",title:"Projects",sub:"Some of my works",children:[w.jsx(Ah,{status:t,children:w.jsx(i7,{children:e.map(n=>w.jsx(Ih,{repo:n,layout:"vertical"},n.name))})}),w.jsx(lo,{children:w.jsxs(Ui,{to:nr.github,label:"projects github",children:[w.jsx("span",{children:"See projects on GitHub"}),w.jsx(X0,{})]})})]}),w.jsx(Ph,{})]})}const l7=""+new URL("resume-eQzQPRv0.pdf",import.meta.url).href,a7=X.object`
 	flex: 1;
 	width: 100%;
 	border: none;
