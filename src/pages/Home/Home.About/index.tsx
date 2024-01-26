@@ -1,6 +1,8 @@
 import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile } from "react-icons/fa";
 
 import { Page } from "@/pages";
+import aboutConfigs from "@/configs/about.json";
+import { calculateAge } from "@/utils/time";
 import me from "@/assets/images/me.png";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
@@ -19,7 +21,7 @@ export default function HomeAbout(props: { $id: string }) {
 						<h3 className="title">Gabriel de Paula Meira</h3>
 						<p>
 							<FaHourglassHalf className="icon" />
-							<span>19 years old</span>
+							<span>{calculateAge(new Date(aboutConfigs.birthdate))} years old</span>
 						</p>
 						<p>
 							<FaGraduationCap className="icon" />
