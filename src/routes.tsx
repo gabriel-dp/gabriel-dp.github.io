@@ -4,7 +4,7 @@ import { Page, Home, Projects, NotFound, Resume } from "@/pages";
 
 export default function Router() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				<Route path={Page.Home} element={<Home />} />
 				<Route path={Page.Projects} element={<Projects />} />
