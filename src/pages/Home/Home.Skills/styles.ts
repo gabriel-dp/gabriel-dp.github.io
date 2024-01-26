@@ -9,6 +9,7 @@ const detailsShow = keyframes`
 
 export const CategoryContainer = styled.details`
 	width: min(100%, 50rem);
+	min-width: 10rem;
 	padding: 1rem 2rem;
 	border-radius: 0.5rem;
 	border: 1px solid ${(props) => props.theme.primary};
@@ -40,6 +41,9 @@ export const CategoryHeader = styled.summary`
 		text-align: center;
 		font-size: 1.25rem;
 		color: ${(props) => props.theme.primary};
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&::before,

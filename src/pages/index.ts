@@ -1,12 +1,14 @@
 import Home from "./Home";
 import Projects from "./Projects";
+import Resume from "./Resume";
 import NotFound from "./NotFound";
 
-export { Home, NotFound, Projects };
+export { Home, NotFound, Projects, Resume };
 
 export enum Page {
 	Home = "/",
 	Projects = "/projects",
+	Resume = "/resume",
 	NotFound = "*",
 }
 

@@ -1,9 +1,45 @@
+import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile } from "react-icons/fa";
+
+import { Page } from "@/pages";
+import me from "@/assets/images/me.png";
 import SectionWrapper from "@/components/layout/SectionWrapper";
+import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
+
+import { AboutContainer, DataContainer, ImageContainer, ResumeButton } from "./styles";
 
 export default function HomeAbout(props: { $id: string }) {
 	return (
 		<SectionWrapper $id={props.$id} title="About" sub="Who am I?">
-			<></>
+			<AboutContainer>
+				<ImageContainer>
+					<img src={me} alt="a handsome boy" />
+				</ImageContainer>
+				<DataContainer>
+					<div className="details">
+						<h3 className="title">Gabriel de Paula Meira</h3>
+						<p>
+							<FaHourglassHalf className="icon" />
+							<span>19 years old</span>
+						</p>
+						<p>
+							<FaGraduationCap className="icon" />
+							<span>Computer Science</span>
+							<span>(UFSJ)</span>
+						</p>
+						<p>
+							<FaMapMarkerAlt className="icon" />
+							<span>São João del Rei,</span>
+							<span>MG / Brazil</span>
+						</p>
+					</div>
+					<ResumeButton>
+						<LinkComponentRouter to={Page.Resume}>
+							<span>View resume</span>
+							<FaFile className="icon" />
+						</LinkComponentRouter>
+					</ResumeButton>
+				</DataContainer>
+			</AboutContainer>
 		</SectionWrapper>
 	);
 }

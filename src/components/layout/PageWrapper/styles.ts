@@ -14,11 +14,14 @@ export const PageContainer = styled.div`
 	width: 100%;
 	min-height: 100dvh;
 	margin: 0 auto;
-	padding-top: ${NAVBAR_HEIGHT_REM}rem;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	&:has(> header) {
+		padding-top: ${NAVBAR_HEIGHT_REM}rem;
+	}
 
 	footer {
 		margin-top: auto;
