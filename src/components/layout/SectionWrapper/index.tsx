@@ -23,7 +23,7 @@ export default function SectionWrapper(props: SectionWrapperI) {
 						{ color: theme?.secondary, position: 1 },
 					]}
 					text>
-					<h2 className="title">- {props.title} -</h2>
+					{props.title ? <h2 className="title">- {props.title} -</h2> : <></>}
 				</GradientComponent>
 				<p className="sub"> {props.sub} </p>
 			</TitleContainer>

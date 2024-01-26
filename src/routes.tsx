@@ -7,7 +7,7 @@ export default function Router() {
 		<BrowserRouter>
 			<Routes>
 				<Route path={Page.Home} element={<Home />} />
-				<Route path={Page.Projetcs} element={<Projects />} />
+				<Route path={Page.Projects} element={<Projects />} />
 				<Route path={Page.NotFound} element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>

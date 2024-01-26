@@ -15,7 +15,6 @@ export const CardContainer = styled.div<CardContainerI>`
 	overflow: hidden;
 	border: 1px solid ${(props) => props.theme.primary};
 	transition: all 0.25s ease-in-out;
-	cursor: pointer;
 	background-color: ${(props) => props.theme.primary}11;
 
 	display: flex;

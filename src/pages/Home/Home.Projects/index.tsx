@@ -1,3 +1,5 @@
+import { FaPlus } from "react-icons/fa";
+
 import { githubService } from "@/services/githubService";
 import AsyncComponent from "@/components/utilities/AsyncComponent";
 import SectionWrapper from "@/components/layout/SectionWrapper";
@@ -20,7 +22,10 @@ export default function HomeProjects(props: { $id: string }) {
 				</CardsContainer>
 			</AsyncComponent>
 			<SeeMoreButton>
-				<LinkComponentRouter to={Page.Projetcs}>More projects</LinkComponentRouter>
+				<LinkComponentRouter to={Page.Projects}>
+					<span>More projects</span>
+					<FaPlus className="icon" />
+				</LinkComponentRouter>
 			</SeeMoreButton>
 		</SectionWrapper>
 	);

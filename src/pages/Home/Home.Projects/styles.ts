@@ -47,5 +47,11 @@ export const CardsContainer = styled.div`
 	}
 `;
 
-export const SeeMoreButton = styled(Button)``;
+export const SeeMoreButton = styled(Button)`
+	&:hover {
+		.icon {
+			transform: rotate(180deg);
+		}
+	}
+`;
 
