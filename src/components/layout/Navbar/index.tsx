@@ -54,7 +54,7 @@ export default function Navbar(props: NavbarI) {
 			<NavbarWrapper>
 				<MainButton aria-label="home-button">
 					<LinkComponentRouter to={Page.Home} top $onClick={closeMenu}>
-						<img src={theme?.logo} alt="dp" />
+						<img src={import.meta.env.BASE_URL + theme?.logo} alt="dp" />
 					</LinkComponentRouter>
 				</MainButton>
 				{props.buttons && props.buttons.length > 0 ? (

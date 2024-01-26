@@ -2,7 +2,7 @@ import { AppTheme } from "@/styles/global";
 
 export const LightTheme: AppTheme = {
 	name: "light",
-	logo: "./logo-gradient.svg",
+	logo: "logo-gradient.svg",
 	primary: "#206E8C",
 	secondary: "#191E2D",
 	primaryText: "#EEEEEE",

@@ -2,7 +2,7 @@ import { AppTheme } from "@/styles/global";
 
 export const DarkTheme: AppTheme = {
 	name: "dark",
-	logo: "./logo-white.svg",
+	logo: "logo-white.svg",
 	primary: "#FAFAFA",
 	secondary: "#DDDDDD",
 	primaryText: "#206E8C",
