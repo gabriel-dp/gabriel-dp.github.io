@@ -8,7 +8,7 @@ export default function Resume() {
 	return (
 		<PageWrapper>
 			<ObjectPDF data={resume}>
-				<embed src={socialConfigs.resume} />
+				<iframe src={socialConfigs.resume} />
 			</ObjectPDF>
 		</PageWrapper>
 	);

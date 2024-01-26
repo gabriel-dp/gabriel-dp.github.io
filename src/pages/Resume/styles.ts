@@ -6,7 +6,8 @@ export const ObjectPDF = styled.object`
 	border: none;
 	display: flex;
 
-	embed {
+	iframe {
+		border: none;
 		flex: 1;
 	}
 `;
