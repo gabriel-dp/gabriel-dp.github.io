@@ -5,7 +5,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "https://gabriel-dp.github.io/",
+	base: "./",
 	plugins: [react(), tsconfigPaths(), svgr()],
 });
 
