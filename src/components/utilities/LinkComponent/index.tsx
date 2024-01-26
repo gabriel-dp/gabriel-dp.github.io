@@ -1,4 +1,5 @@
 import { animateScroll } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 import { NAVBAR_HEIGHT_REM } from "@/components/layout/Navbar";
 
@@ -11,8 +12,12 @@ interface LinkComponentI {
 }
 
 export function LinkComponentRouter(props: LinkComponentI & { top?: boolean }) {
+	// Disables scroll transition in different pages
+	const { pathname } = useLocation();
+	const duration = pathname == props.to ? 1000 : 0;
+
 	function handleClick() {
-		if (props.top) animateScroll.scrollToTop();
+		if (props.top) animateScroll.scrollToTop({ duration, smooth: true });
 		if (props.$onClick) props.$onClick();
 	}
 
