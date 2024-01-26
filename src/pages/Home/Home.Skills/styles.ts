@@ -49,7 +49,7 @@ export const CategoryHeader = styled.summary`
 		height: 0.15rem;
 		background-color: ${(props) => props.theme.primary};
 		position: absolute;
-		top: calc(50% - 0.125rem);
+		top: calc(50% - 0.15rem);
 		right: 0;
 		transition: all 0.25s ease-in-out;
 	}
