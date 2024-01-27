@@ -3,7 +3,7 @@ import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile } from "react-
 import { Page } from "@/pages";
 import aboutConfigs from "@/configs/about.json";
 import { calculateAge } from "@/utils/time";
-import me from "@/assets/images/me.png";
+import me from "@/assets/images/me.webp";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
 
