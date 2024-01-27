@@ -31,7 +31,7 @@ export function LinkComponentRouter(props: LinkComponentI & { top?: boolean }) {
 export function LinkComponentScroll(props: LinkComponentI) {
 	const offset = -16 * NAVBAR_HEIGHT_REM - 0.5; // 1rem = 16px
 	return (
-		<CustomLinkScroll to={props.to} offset={offset} smooth onClick={props.$onClick} href="">
+		<CustomLinkScroll to={props.to} offset={offset} smooth onClick={props.$onClick} href="" aria-label={props.to}>
 			{props.children}
 		</CustomLinkScroll>
 	);
