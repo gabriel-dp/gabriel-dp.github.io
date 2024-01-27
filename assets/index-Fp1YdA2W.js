@@ -1220,7 +1220,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		border: none;
 		flex: 1;
 	}
-`;function s7(){return w.jsx(ya,{children:w.jsx(a7,{data:l7,children:w.jsx("iframe",{src:rr.resume,sandbox:"allow-same-origin allow-scripts"})})})}function u7(){return w.jsxs(ya,{children:[w.jsx(Oc,{}),w.jsx("h1",{children:"Not Found"})]})}var gn=(e=>(e.Home="/",e.Projects="/projects",e.Resume="/resume",e.NotFound="*",e))(gn||{});function c7(){return w.jsx(sv,{children:w.jsxs(nv,{children:[w.jsx(ci,{path:gn.Home,element:w.jsx(r7,{})}),w.jsx(ci,{path:gn.Projects,element:w.jsx(o7,{})}),w.jsx(ci,{path:gn.Resume,element:w.jsx(s7,{})}),w.jsx(ci,{path:gn.NotFound,element:w.jsx(u7,{})})]})})}const f7=p4`
+`;function s7(){return w.jsx(ya,{children:w.jsx(a7,{data:l7,children:w.jsx("iframe",{src:rr.resume,sandbox:"allow-same-origin allow-scripts allow-popups"})})})}function u7(){return w.jsxs(ya,{children:[w.jsx(Oc,{}),w.jsx("h1",{children:"Not Found"})]})}var gn=(e=>(e.Home="/",e.Projects="/projects",e.Resume="/resume",e.NotFound="*",e))(gn||{});function c7(){return w.jsx(sv,{children:w.jsxs(nv,{children:[w.jsx(ci,{path:gn.Home,element:w.jsx(r7,{})}),w.jsx(ci,{path:gn.Projects,element:w.jsx(o7,{})}),w.jsx(ci,{path:gn.Resume,element:w.jsx(s7,{})}),w.jsx(ci,{path:gn.NotFound,element:w.jsx(u7,{})})]})})}const f7=p4`
     * {
         margin: 0;
         padding: 0;
