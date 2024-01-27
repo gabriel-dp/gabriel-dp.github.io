@@ -8,7 +8,7 @@ export default function Resume() {
 	return (
 		<PageWrapper>
 			<ObjectPDF data={resume}>
-				<iframe src={socialConfigs.resume} sandbox="allow-same-origin allow-scripts" />
+				<iframe src={socialConfigs.resume} sandbox="allow-same-origin allow-scripts allow-popups" />
 			</ObjectPDF>
 		</PageWrapper>
 	);
