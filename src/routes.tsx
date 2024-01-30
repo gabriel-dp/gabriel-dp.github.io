@@ -4,7 +4,7 @@ import { Page, Home, Projects, NotFound, Resume } from "@/pages";
 
 export default function Router() {
 	// Alternates router if it is a Vercel deployment
-	const BaseRouter = import.meta.env.VITE_VERCEL_ENV ? BrowserRouter : HashRouter;
+	const BaseRouter = import.meta.env.VITE_VERCEL_ENV == "production" ? BrowserRouter : HashRouter;
 
 	return (
 		<BaseRouter>
