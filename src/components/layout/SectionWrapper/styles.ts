@@ -17,6 +17,11 @@ export const SectionContainer = styled.section`
 	h3 {
 		font-size: 1.5rem;
 	}
+
+	:first-child + &:nth-of-type(1) {
+		border: none;
+		padding-top: 1rem;
+	}
 `;
 
 export const TitleContainer = styled.div`
@@ -58,3 +63,4 @@ export const TitleContainer = styled.div`
 		}
 	}
 `;
+
