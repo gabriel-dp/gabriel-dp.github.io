@@ -97,3 +97,11 @@ export const ResumeButton = styled(Button)`
 	}
 `;
 
+export const MoreAboutButton = styled(Button)`
+	&:hover {
+		.icon {
+			transform: translateX(0.15rem);
+		}
+	}
+`;
+

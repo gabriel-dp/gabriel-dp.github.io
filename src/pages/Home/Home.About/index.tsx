@@ -1,4 +1,4 @@
-import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile } from "react-icons/fa";
+import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile, FaArrowRight } from "react-icons/fa";
 
 import { Page } from "@/pages";
 import aboutConfigs from "@/configs/about.json";
@@ -7,7 +7,7 @@ import me from "@/assets/images/me.webp";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
 
-import { AboutContainer, DataContainer, ImageContainer, ResumeButton } from "./styles";
+import { AboutContainer, DataContainer, ImageContainer, ResumeButton, MoreAboutButton } from "./styles";
 
 export default function HomeAbout(props: { $id: string }) {
 	return (
@@ -42,6 +42,12 @@ export default function HomeAbout(props: { $id: string }) {
 					</ResumeButton>
 				</DataContainer>
 			</AboutContainer>
+			<MoreAboutButton>
+				<LinkComponentRouter to={Page.About}>
+					<span>More about me</span>
+					<FaArrowRight className="icon" />
+				</LinkComponentRouter>
+			</MoreAboutButton>
 		</SectionWrapper>
 	);
 }
