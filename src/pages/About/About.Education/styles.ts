@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const EducationContainer = styled.div`
 	width: min(55rem, calc(100% - 1.5rem));
-	min-width: 10rem;
+	min-width: 12rem;
 	padding: 1rem 0;
 	position: relative;
 
@@ -13,6 +13,9 @@ export const EducationContainer = styled.div`
 
 export const EducationPath = styled.div`
 	width: 100%;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -23,13 +26,22 @@ export const SingleEducation = styled.div.attrs({
 })`
 	width: calc(100% - (1.5rem + 1px));
 	flex: 1;
-	padding: 1rem;
+	padding: 1rem 1.25rem;
 	border-radius: 0.5rem;
 	background-color: ${(props) => props.theme.primary}11;
 	border: 1px solid ${(props) => props.theme.primary};
 	position: relative;
 	align-self: flex-end;
 	text-align: start;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+
+	.name {
+		font-size: 1.125rem;
+		color: ${(props) => props.theme.primary};
+	}
 
 	&::before {
 		content: "";

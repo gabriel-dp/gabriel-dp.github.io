@@ -25,7 +25,7 @@ export const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	gap: 0.5rem;
 `;
 
 export const ImageContainer = styled.div`

@@ -5,13 +5,14 @@ import { EducationContainer, EducationPath, SingleEducation, VerticalLine } from
 
 export default function AboutEducation() {
 	return (
-		<SectionWrapper $id="education" title="Education">
+		<SectionWrapper $id="education" title="Education" sub="My student life">
 			<EducationContainer>
 				<VerticalLine />
 				<EducationPath>
 					{about.educations.map((education) => (
 						<SingleEducation key={education.name}>
-							<p>{education.name}</p>
+							<h4 className="name">{education.name}</h4>
+							<p>{education.institution}</p>
 							<p>
 								{education.start} - {education.end}
 							</p>
