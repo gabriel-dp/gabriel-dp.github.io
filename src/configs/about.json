@@ -1,4 +1,16 @@
 {
-	"birthdate": "2004-06-19T03:00:00.000Z"
+	"birthdate": "2004-06-19T03:00:00.000Z",
+	"educations": [
+		{
+			"name": "Computer Science",
+			"start": "2022",
+			"end": "2025"
+		},
+		{
+			"name": "High School",
+			"start": "2019",
+			"end": "2021"
+		}
+	]
 }
 
