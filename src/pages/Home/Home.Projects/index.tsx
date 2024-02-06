@@ -22,7 +22,7 @@ export default function HomeProjects(props: { $id: string }) {
 				</CardsContainer>
 			</AsyncComponent>
 			<SeeMoreButton>
-				<LinkComponentRouter to={Page.Projects}>
+				<LinkComponentRouter to={Page.Projects} top>
 					<span>More projects</span>
 					<FaPlus className="icon" />
 				</LinkComponentRouter>

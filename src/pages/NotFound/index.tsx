@@ -32,7 +32,7 @@ export default function NotFound() {
 				<div className="home">
 					<p>Are you lost?</p>
 					<Button>
-						<LinkComponentRouter to={Page.Home}>
+						<LinkComponentRouter to={Page.Home} top>
 							<span>Home</span>
 							<FaHome className="icon" />
 						</LinkComponentRouter>

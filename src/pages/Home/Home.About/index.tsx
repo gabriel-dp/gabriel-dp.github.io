@@ -35,7 +35,7 @@ export default function HomeAbout(props: { $id: string }) {
 						</p>
 					</div>
 					<ResumeButton>
-						<LinkComponentRouter to={Page.Resume}>
+						<LinkComponentRouter to={Page.Resume} top>
 							<span>View resume</span>
 							<FaFile className="icon" />
 						</LinkComponentRouter>
@@ -43,7 +43,7 @@ export default function HomeAbout(props: { $id: string }) {
 				</DataContainer>
 			</AboutContainer>
 			<MoreAboutButton>
-				<LinkComponentRouter to={Page.About}>
+				<LinkComponentRouter to={Page.About} top>
 					<span>More about me</span>
 					<FaArrowRight className="icon" />
 				</LinkComponentRouter>
