@@ -15,6 +15,7 @@ export const BioContainer = styled.div`
 
 export const TextContainer = styled.div`
 	width: 100%;
+	min-width: 15rem;
 	padding: 1rem 1.5rem;
 	border-radius: 0.5rem;
 	border: 1px solid ${(props) => props.theme.primary};
@@ -24,7 +25,7 @@ export const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	gap: 0.5rem;
 `;
 
 export const ImageContainer = styled.div`
@@ -39,8 +40,9 @@ export const ImageContainer = styled.div`
 	justify-content: center;
 
 	img {
-		filter: drop-shadow(0 -0.25rem 0.5rem ${(props) => props.theme.dark}22);
+		max-width: 100%;
 		max-height: 100%;
+		filter: drop-shadow(0 -0.25rem 0.5rem ${(props) => props.theme.dark}22);
 	}
 `;
 

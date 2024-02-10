@@ -9,7 +9,7 @@ export default function AboutMain() {
 	const theme = useTheme();
 
 	return (
-		<SectionWrapper $id="#main" title="About">
+		<SectionWrapper $id="#main" title="About" sub="More about me">
 			<BioContainer>
 				<ImageContainer>
 					<img src={me} alt="a handsome boy" />
