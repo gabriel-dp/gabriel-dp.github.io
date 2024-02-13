@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 import useStoredState from "@/hooks/useStoredState";
-import { darkThemePreferred } from "@/utils/darkThemePreferred";
+import { darkThemePreferred } from "@/utils/browser";
 
 interface ConfigsContextI {
 	darkMode: boolean;
@@ -28,4 +28,3 @@ export function ConfigsProvider(props: { children: React.ReactNode }) {
 		</ConfigsContext.Provider>
 	);
 }
-
