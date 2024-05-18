@@ -20,32 +20,28 @@
 			"time": "2019-2022",
 			"assets": "F1inSchools",
 			"achievement": "2nd Place Nationals + World Finalist",
-			"description": "In F1 in Schools, my team SwordFish was challenged to project, test, build and race with a miniature Formula 1 car, working in Marketing and Project Management, also presenting all the work to the judges.",
-			"reportUrl": "https://www.fieb.org.br/noticias/sesi-bahia-representa-brasil-mundial-da-f1-in-schools/"
+			"description": "In F1 in Schools, my team SwordFish was challenged to project, test, build and race with a miniature Formula 1 car, working in Marketing and Project Management, also presenting all the work to the judges."
 		},
 		{
 			"title": "Olimpíada Brasileira de Robótica",
 			"time": "2019-2021",
 			"assets": "OBR",
 			"achievement": "4th Place Nationals + 1st Place Regionals (2x)",
-			"description": "My first programming contact, the Brazilian Robotics Olympiad, was an incredible experience, I was able for the first time to work with a team to achieve a goal, learning as much as possible along that time with Death Punch and D4RKMODE.",
-			"reportUrl": "string"
+			"description": "My first programming contact, the Brazilian Robotics Olympiad, was an incredible experience, I was able for the first time to work with a team to achieve a goal, learning as much as possible along that time with Death Punch and D4RKMODE."
 		},
 		{
 			"title": "Hackathon AEB",
-			"time": "September, 2020",
+			"time": "August, 2020",
 			"assets": "AEB",
 			"achievement": "1st Place",
-			"description": "In the hackathon of the Brazilian Space Agency, the competitors had to program a entire code for a space rover in the moon, which must follow a track, avoid obstacles and deal with terrain unevenness, all that on the sBotics Simulator.",
-			"reportUrl": "https://www.gov.br/aeb/pt-br/assuntos/noticias/equipe-de-vitoria-da-conquista-ba-vence-hackathon-espacial-da-aeb"
+			"description": "In the hackathon of the Brazilian Space Agency, the competitors had to program a entire code for a space rover in the moon, which must follow a track, avoid obstacles and deal with terrain unevenness, all that on the sBotics Simulator."
 		},
 		{
 			"title": "ANICON",
 			"time": "September, 2019",
 			"assets": "Anicon",
 			"achievement": "1st Place",
-			"description": "ANICON is a traditional regional event which mixes geek culture, technology and the robotics contests in partnership with Casa da Robótica. My team (StrangerBots404), made up by 3 great friends, won the category \"Fastest Line Follower\".",
-			"reportUrl": ""
+			"description": "ANICON is a traditional regional event which mixes geek culture, technology and the robotics contests in partnership with Casa da Robótica. My team (StrangerBots404), made up by 3 great friends, won the category \"Fastest Line Follower\"."
 		}
 	]
 }
