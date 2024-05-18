@@ -3,16 +3,15 @@ import logos from "@/assets/images/contests/logos";
 
 import { CardContainer, Description, Header, LogoContainer, Title } from "./styles";
 
-interface ContestCardI {
+interface Contest {
 	title: string;
 	time: string;
 	assets: string;
 	achievement: string;
 	description: string;
-	reportUrl: string;
 }
 
-export default function ContestCard({ card }: { card: ContestCardI }) {
+export default function ContestCard({ card }: { card: Contest }) {
 	return (
 		<CardContainer $backgroundUrl={backgrounds[card.assets]}>
 			<Header>
