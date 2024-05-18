@@ -25,10 +25,9 @@ export default function SectionWrapper(props: SectionWrapperI) {
 					text>
 					{props.title ? <h2 className="title">- {props.title} -</h2> : <></>}
 				</GradientComponent>
-				<p className="sub"> {props.sub} </p>
+				<p className="sub">{props.sub}</p>
 			</TitleContainer>
 			{props.children}
 		</SectionContainer>
 	);
 }
-

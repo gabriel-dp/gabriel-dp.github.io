@@ -46,6 +46,7 @@ export const TitleContainer = styled.div`
 	.sub {
 		font-size: 1.25rem;
 		color: ${(props) => props.theme.secondary};
+		text-align: center;
 	}
 
 	.title:hover,
@@ -63,4 +64,3 @@ export const TitleContainer = styled.div`
 		}
 	}
 `;
-

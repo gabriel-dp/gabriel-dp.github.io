@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 
 import AboutMain from "./About.Main";
 import AboutEducation from "./About.Education";
+import AboutContests from "./About.Contests";
 
 export default function About() {
 	return (
@@ -11,8 +12,8 @@ export default function About() {
 			<Navbar />
 			<AboutMain />
 			<AboutEducation />
+			<AboutContests />
 			<Footer />
 		</PageWrapper>
 	);
 }
-
