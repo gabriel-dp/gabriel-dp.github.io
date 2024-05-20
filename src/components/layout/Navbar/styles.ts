@@ -59,10 +59,18 @@ export const NavbarHeader = styled.header<NavbarHeaderI>`
 			}
 		}
 
-		ul {
+		.navbar-ulist {
+			padding-top: ${(props) => props.height}rem;
 			width: 100%;
-			height: min-content;
+			max-height: 100%;
 			flex-direction: column;
+			align-items: center;
+			overflow-y: auto;
+
+			& > * {
+				height: auto;
+				min-height: 3rem;
+			}
 		}
 
 		.nav-button {
@@ -86,6 +94,12 @@ export const NavbarWrapper = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
+
+	.navbar-configs-only {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+	}
 `;
 
 export const MainButton = styled.button`
@@ -122,11 +136,11 @@ export const NavbarNav = styled.nav`
 	gap: 1.5rem;
 `;
 
-export const NavbarList = styled.ul`
+export const NavbarList = styled.ul.attrs({
+	className: "navbar-ulist",
+})`
 	height: 100%;
 	max-width: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
 
 	display: flex;
 	flex-direction: row;
@@ -218,4 +232,3 @@ export const MenuButton = styled.button.attrs({
 		color: ${(props) => props.theme.secondary};
 	}
 `;
-

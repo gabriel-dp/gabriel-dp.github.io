@@ -7,6 +7,7 @@ const SWITCH_SIZE_REM = 1.4;
 export const Switch = styled.div`
 	position: relative;
 	min-width: ${TRAIL_WIDTH_REM}rem;
+	max-width: ${TRAIL_WIDTH_REM}rem;
 
 	display: flex;
 	align-items: center;
@@ -87,4 +88,3 @@ export const Switch = styled.div`
 		}
 	}
 `;
-

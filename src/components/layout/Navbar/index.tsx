@@ -5,6 +5,7 @@ import { Page } from "@/pages";
 import { useTheme } from "@/contexts/theme/useTheme";
 import { LinkComponentRouter, LinkComponentScroll } from "@/components/utilities/LinkComponent";
 import ThemeSwitch from "@/components/others/ThemeSwitch";
+import LanguageSelector from "@/components/others/LanguageSelector";
 
 import { MainButton, MenuButton, NavbarButton, NavbarHeader, NavbarList, NavbarNav, NavbarWrapper } from "./styles";
 
@@ -70,20 +71,21 @@ export default function Navbar(props: NavbarI) {
 										</NavbarButton>
 									</li>
 								))}
+								<ThemeSwitch />
+								<LanguageSelector />
 							</NavbarList>
-							<ThemeSwitch />
 						</NavbarNav>
 						<MenuButton onClick={handleMenuClick} aria-label="menu-button">
 							{menuActive ? <CloseIcon className="icon" /> : <MenuIcon className="icon" />}
 						</MenuButton>
 					</>
 				) : (
-					<>
+					<div className="navbar-configs-only">
 						<ThemeSwitch />
-					</>
+						<LanguageSelector />
+					</div>
 				)}
 			</NavbarWrapper>
 		</NavbarHeader>
 	);
 }
-
