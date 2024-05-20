@@ -7,11 +7,13 @@ import Navbar from "@/components/layout/Navbar";
 import Button from "@/components/layout/Button";
 import GradientComponent from "@/components/utilities/GradientComponent";
 import { LinkComponentRouter } from "@/components/utilities/LinkComponent";
+import useLanguage from "@/contexts/language/useLanguage";
 
 import { NotFoundContainer } from "./styles";
 
 export default function NotFound() {
 	const theme = useTheme();
+	const t = useLanguage();
 
 	return (
 		<PageWrapper>
@@ -27,13 +29,13 @@ export default function NotFound() {
 						text>
 						<h1 className="number">404</h1>
 					</GradientComponent>
-					<h1>Page Not Found</h1>
+					<h1>{t`404.page-not-found`}</h1>
 				</div>
 				<div className="home">
-					<p>Are you lost?</p>
+					<p>{t`404.are-you-lost`}</p>
 					<Button>
 						<LinkComponentRouter to={Page.Home} top>
-							<span>Home</span>
+							<span>{t`404.home-button`}</span>
 							<FaHome className="icon" />
 						</LinkComponentRouter>
 					</Button>
@@ -42,4 +44,3 @@ export default function NotFound() {
 		</PageWrapper>
 	);
 }
-

@@ -10,16 +10,18 @@ import SectionWrapper from "@/components/layout/SectionWrapper";
 import Button from "@/components/layout/Button";
 import Footer from "@/components/layout/Footer";
 import { LinkComponentExternal } from "@/components/utilities/LinkComponent";
+import useLanguage from "@/contexts/language/useLanguage";
 
 import { CardsContainer } from "./styles";
 
 export default function Projects() {
 	const [repos, status] = githubService.Repos("normal");
+	const t = useLanguage();
 
 	return (
 		<PageWrapper>
 			<Navbar />
-			<SectionWrapper $id="projects" title="Projects" sub="Some of my works">
+			<SectionWrapper $id="projects" title={t`sections.projects.title`} sub={t`sections.projects.subpage`}>
 				<AsyncComponent status={status}>
 					<CardsContainer>
 						{repos.map((repo) => (
@@ -29,7 +31,7 @@ export default function Projects() {
 				</AsyncComponent>
 				<Button>
 					<LinkComponentExternal to={socialConfigs.github} label="projects github">
-						<span>See projects on GitHub</span>
+						<span>{t`projects.github-button`}</span>
 						<FaGithub />
 					</LinkComponentExternal>
 				</Button>
@@ -38,4 +40,3 @@ export default function Projects() {
 		</PageWrapper>
 	);
 }
-

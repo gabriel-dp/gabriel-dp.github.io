@@ -1,0 +1,98 @@
+{
+	"sections": {
+		"about": { "title": "Sobre", "subtitle": "Quem eu sou?", "subpage": "Mais sobre mim" },
+		"skills": { "title": "Habilidades", "subtitle": "Ferramentas que uso" },
+		"projects": { "title": "Projetos", "subtitle": "Meus trabalhos", "subpage": "Alguns projetos do GitHub" },
+		"contact": { "title": "Contato", "subtitle": "Não seja tímido!" },
+		"education": { "title": "Educação", "subtitle": "Minha vida de estudante" },
+		"contests": { "title": "Competições", "subtitle": "Conquistas em equipe e individuais" }
+	},
+	"main": {
+		"professional": ["Desenvolvedor de Software", "Modelador 3D"]
+	},
+	"about": {
+		"y/o": "anos",
+		"CS": "Ciência da Computação",
+		"local": { "city": "São João del Rei", "state": "MG", "country": "Brasil" },
+		"university": "UFSJ",
+		"resume-button": "Ver currículo",
+		"more-button": "Mais sobre mim",
+		"description": [
+			"Eu sou desenvolvedor de software e estudante de Ciência da Computação. Iniciei minha jornada em 2019 com a robótica, e desde então meu foco tem sido encarar desafios, criando soluções eficientes e escaláveis.",
+			"Eu estou dedicado constantemente a aplicar e melhorar minhas habilidades, contribuindo para iniciativas inovadoras."
+		],
+		"educations": [
+			{
+				"name": "Ciência da Computação",
+				"institution": "Universidade Federal de São João del Rei",
+				"start": "2022",
+				"end": "Atual"
+			},
+			{
+				"name": "Ensino Médio",
+				"institution": "Escola Sesi Anísio Teixeira",
+				"start": "2019",
+				"end": "2021"
+			}
+		],
+		"contests": [
+			{
+				"title": "F1 nas Escolas",
+				"time": "2019-2022",
+				"assets": "F1inSchools",
+				"achievement": "2º Lugar Nacional + Finalista Mundial",
+				"description": "Na F1 nas Escolas, minha equipe SwordFish foi desafiada a projetar, testar, construir e correr com um carro de Fórmula 1 em miniatura, trabalhando no Marketing e Gestão de Projetos, também apresentando todo o trabalho para os juízes."
+			},
+			{
+				"title": "OBR",
+				"time": "2019-2021",
+				"assets": "OBR",
+				"achievement": "4º Lugar Nacional + 1º Lugar Regional (2x)",
+				"description": "Meu primeiro contato com a programação, a Olímpiada Brasileira de Robótica foi uma experiência incrível, pela primeira vez pude trabalhar em equipe para conquistar um objetivo, aprendendo o máximo possível com Death Punch e D4RKMODE."
+			},
+			{
+				"title": "Hackathon AEB",
+				"time": "August, 2020",
+				"assets": "AEB",
+				"achievement": "1º Lugar",
+				"description": "No hackathon da Agência Espacial Brasileira, os competidores tiveram de desenvolver um código completo para um rover espacial na lua, que deveria seguir um caminho, desviar de obstáculos e lidar com desníveis no terreno, tudo isso no simulador sBotics."
+			},
+			{
+				"title": "ANICON",
+				"time": "September, 2019",
+				"assets": "Anicon",
+				"achievement": "1º Lugar",
+				"description": "ANICON é um evento regional tradicional que mistura cultura geek, tecnologia e competições de robótica. Meu time (StrangerBots404), composto por três grandes amigos, venceu a categoria de seguidor de linha mais rápido."
+			}
+		]
+	},
+	"skills": {
+		"languages": "Linguagens",
+		"frameworks&libs": "Frameworks e Bibliotecas",
+		"others": "Outros"
+	},
+	"projects": {
+		"more-button": "Mais projetos",
+		"code-button": "Código",
+		"website-button": "Website",
+		"github-button": "Ver projetos no GitHub"
+	},
+	"contact": {
+		"email-me-at": "Você pode enviar um email diretamente para",
+		"or-use-tool": "ou usar a ferramenta abaixo.",
+		"subject": "Assunto",
+		"message": "Mensagem",
+		"send-button": "Enviar mensagem"
+	},
+
+	"footer": {
+		"made-by": "Feito com ♡ por",
+		"rights": "Todos os direitos reservados",
+		"source-code": "Código-fonte do projeto"
+	},
+	"404": {
+		"page-not-found": "Página não encontrada!",
+		"are-you-lost": "Está perdido?",
+		"home-button": "Página principal"
+	}
+}

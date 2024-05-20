@@ -3,7 +3,7 @@ import logos from "@/assets/images/contests/logos";
 
 import { CardContainer, Description, Header, LogoContainer, Title } from "./styles";
 
-interface Contest {
+export interface ContestI {
 	title: string;
 	time: string;
 	assets: string;
@@ -11,7 +11,7 @@ interface Contest {
 	description: string;
 }
 
-export default function ContestCard({ card }: { card: Contest }) {
+export default function ContestCard({ card }: { card: ContestI }) {
 	return (
 		<CardContainer $backgroundUrl={backgrounds[card.assets]}>
 			<Header>

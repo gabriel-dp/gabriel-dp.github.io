@@ -3,6 +3,7 @@ import { FaPaperPlane, FaComment, FaFlag } from "react-icons/fa";
 
 import socialConfigs from "@/configs/social.json";
 import SectionWrapper from "@/components/layout/SectionWrapper";
+import useLanguage from "@/contexts/language/useLanguage";
 
 import { FormContainer, InputContainer, SubmitButton, TextContainer } from "./styles";
 
@@ -11,43 +12,41 @@ interface ContactData {
 	message: string;
 }
 
-const generateMailTo = (subject: string, message: string) =>
-	`mailto:${socialConfigs.email}?subject=${subject}&body=${message}`;
-
 export default function HomeContact(props: { $id: string }) {
+	const t = useLanguage();
 	const { register, handleSubmit } = useForm<ContactData>();
 
 	const onSubmit: SubmitHandler<ContactData> = (data) => {
-		window.open(generateMailTo(data.subject, data.message), "_blank");
+		const message = `mailto:${socialConfigs.email}?subject=${data.subject}&body=${data.message}`;
+		window.open(message, "_blank");
 	};
 
 	return (
-		<SectionWrapper $id={props.$id} title="Contact" sub="Get in touch!">
+		<SectionWrapper $id={props.$id} title={t`sections.contact.title`} sub={t`sections.contact.subtitle`}>
 			<TextContainer>
-				<p>You can email me directly at</p>
+				<p>{t`contact.email-me-at`}</p>
 				<p className="email">{socialConfigs.email}</p>
-				<p> or use the tool below.</p>
+				<p>{t`contact.or-use-tool`}</p>
 			</TextContainer>
 			<FormContainer onSubmit={handleSubmit(onSubmit)}>
 				<InputContainer>
 					<input type="text" id="subject" required {...register("subject")} />
 					<label htmlFor="subject">
 						<FaFlag className="icon" />
-						<span>Subject</span>
+						<span>{t`contact.subject`}</span>
 					</label>
 				</InputContainer>
 				<InputContainer>
 					<textarea id="message" required {...register("message")} />
 					<label htmlFor="message">
 						<FaComment className="icon" />
-						<span>Message</span>
+						<span>{t`contact.message`}</span>
 					</label>
 				</InputContainer>
 				<SubmitButton>
-					<span>Send message</span> <FaPaperPlane className="icon" />
+					<span>{t`contact.send-button`}</span> <FaPaperPlane className="icon" />
 				</SubmitButton>
 			</FormContainer>
 		</SectionWrapper>
 	);
 }
-

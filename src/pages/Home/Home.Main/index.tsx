@@ -3,13 +3,13 @@ import GradientComponent from "@/components/utilities/GradientComponent";
 import TypeWriterComponent from "@/components/others/TypeWriter";
 import { SocialIconGithub, SocialIconInstagram, SocialIconLinkedin } from "@/components/icons/SocialIcons";
 import { LinkComponentScroll } from "@/components/utilities/LinkComponent";
+import useLanguage from "@/contexts/language/useLanguage";
 
 import { MainSection, MainContainer, HorizontalLine, SocialContainer, ArrowDown, ArrowContainer } from "./styles";
 
-const TYPEWRITER_STRINGS = ["Software Developer", "3D Modeler"];
-
 export default function HomeMain(props: { $id: string; next: string }) {
 	const theme = useTheme();
+	const t = useLanguage();
 
 	return (
 		<MainSection id={props.$id}>
@@ -26,7 +26,7 @@ export default function HomeMain(props: { $id: string; next: string }) {
 						<span>Gabriel</span> <span>de Paula</span>
 					</h1>
 				</GradientComponent>
-				<TypeWriterComponent strings={TYPEWRITER_STRINGS} $className="typewriter" />
+				<TypeWriterComponent strings={t("main.professional", { returnObjects: true })} $className="typewriter" />
 				<GradientComponent
 					className="line"
 					direction={45}
@@ -50,4 +50,3 @@ export default function HomeMain(props: { $id: string; next: string }) {
 		</MainSection>
 	);
 }
-

@@ -4,6 +4,7 @@ import githubConfig from "@/configs/github.json";
 import { Repo } from "@/services/githubService";
 import { LinkComponentExternal } from "@/components/utilities/LinkComponent";
 import LazyLoadImage from "@/components/utilities/LazyLoadImage";
+import useLanguage from "@/contexts/language/useLanguage";
 
 import {
 	ActionButton,
@@ -20,6 +21,8 @@ interface RepoCardI {
 }
 
 export default function RepoCard(props: RepoCardI) {
+	const t = useLanguage();
+
 	const socialPreviewUrl = `https://raw.githubusercontent.com/${githubConfig.user}/${props.repo.name}/main/docs/social-preview.png`;
 
 	return (
@@ -35,14 +38,14 @@ export default function RepoCard(props: RepoCardI) {
 				<ActionButtonsContainer>
 					<ActionButton>
 						<LinkComponentExternal to={props.repo.html_url} label="source code">
-							<span>Code</span>
+							<span>{t`projects.code-button`}</span>
 							<FaCode className="icon" />
 						</LinkComponentExternal>
 					</ActionButton>
 					{props.repo.homepage != "" && (
 						<ActionButton>
 							<LinkComponentExternal to={props.repo.homepage} label="live website">
-								<span>Website</span>
+								<span>{t`projects.website-button`}</span>
 								<FaLink className="icon" />
 							</LinkComponentExternal>
 						</ActionButton>
@@ -52,4 +55,3 @@ export default function RepoCard(props: RepoCardI) {
 		</CardContainer>
 	);
 }
-

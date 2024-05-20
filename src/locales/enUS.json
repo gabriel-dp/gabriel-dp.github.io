@@ -1,0 +1,97 @@
+{
+	"sections": {
+		"about": { "title": "About", "subtitle": "Who am I?", "subpage": "More about me" },
+		"skills": { "title": "Skills", "subtitle": "Tools I use to work" },
+		"projects": { "title": "Projects", "subtitle": "My works", "subpage": "Some projects from GitHub" },
+		"contact": { "title": "Contact", "subtitle": "Get in touch!" },
+		"education": { "title": "Education", "subtitle": "My student life" },
+		"contests": { "title": "Contests", "subtitle": "Team and individual achievements" }
+	},
+	"main": {
+		"professional": ["Software Developer", "3D Modeler"]
+	},
+	"about": {
+		"y/o": "years old",
+		"CS": "Computer Science",
+		"local": { "city": "São João del Rei", "state": "MG", "country": "Brazil" },
+		"university": "UFSJ",
+		"resume-button": "View resume",
+		"more-button": "More about me",
+		"description": [
+			"I'm an enthusiastic software developer and Computer Science student. I began my journey in 2019 with robotics, and since then, my focus has been on tackling challenges, creating efficient and scalable solutions.",
+			"I'm dedicated consistenly to applying and enhancing my skills, as well as contributing to innovative initiatives."
+		],
+		"educations": [
+			{
+				"name": "Computer Science",
+				"institution": "Federal University São João del Rei",
+				"start": "2022",
+				"end": "Now"
+			},
+			{
+				"name": "High School",
+				"institution": "Sesi School Anísio Teixeira",
+				"start": "2019",
+				"end": "2021"
+			}
+		],
+		"contests": [
+			{
+				"title": "F1 in Schols",
+				"time": "2019-2022",
+				"assets": "F1inSchools",
+				"achievement": "2nd Place Nationals + World Finalist",
+				"description": "In F1 in Schools, my team SwordFish was challenged to project, test, build and race with a miniature Formula 1 car, working in Marketing and Project Management, also presenting all the work to the judges."
+			},
+			{
+				"title": "OBR",
+				"time": "2019-2021",
+				"assets": "OBR",
+				"achievement": "4th Place Nationals + 1st Place Regionals (2x)",
+				"description": "My first contact with programming, the Brazilian Robotics Olympiad was an incredible experience, For the first time I was able to work with a team to achieve a goal, learning as much as possible along that time with Death Punch and D4RKMODE."
+			},
+			{
+				"title": "Hackathon AEB",
+				"time": "August, 2020",
+				"assets": "AEB",
+				"achievement": "1st Place",
+				"description": "In the hackathon of the Brazilian Space Agency, the competitors had to program a entire code for a space rover in the moon, which must follow a track, avoid obstacles and deal with terrain unevenness, all that on the sBotics Simulator."
+			},
+			{
+				"title": "ANICON",
+				"time": "September, 2019",
+				"assets": "Anicon",
+				"achievement": "1st Place",
+				"description": "ANICON is a traditional regional event which mixes geek culture, technology and the robotics contests. My team (StrangerBots404), made up by 3 great friends, won the fastest line follower category."
+			}
+		]
+	},
+	"skills": {
+		"languages": "Languages",
+		"frameworks&libs": "Frameworks & Libs",
+		"others": "Others"
+	},
+	"projects": {
+		"more-button": "More projects",
+		"code-button": "Code",
+		"website-button": "Website",
+		"github-button": "See projects on GitHub"
+	},
+	"contact": {
+		"email-me-at": "You can email me directly at",
+		"or-use-tool": "or use the tool below.",
+		"subject": "Subject",
+		"message": "Message",
+		"send-button": "Send message"
+	},
+	"footer": {
+		"made-by": "Made with ♡ by",
+		"rights": "All rights reserved",
+		"source-code": "Website source code"
+	},
+	"404": {
+		"page-not-found": "Page not Found!",
+		"are-you-lost": "Are you lost?",
+		"home-button": "Home page"
+	}
+}
