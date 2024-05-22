@@ -42,10 +42,10 @@ This is the second version of my personal page, cleaner and more professional.
 - [x] 📱Responsive layout
 - [x] 🪪 Professional resume
 - [x] 🌐 Projects synced with GitHub
+- [x] 🔠 Multi-language support
 
 &nbsp;
 
-- [ ] 🔠 Multi-language support
 - [ ] 🔍 Efficient SEO
 
 &nbsp;
