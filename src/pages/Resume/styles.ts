@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
 export const ObjectPDF = styled.object`
-	flex: 1;
-	width: 100%;
+	height: 75svh;
+	width: calc(100% - 2rem);
 	border: none;
+
 	display: flex;
-
-	iframe {
-		border: none;
-		flex: 1;
-	}
+	flex-direction: column;
+	align-items: center;
 `;
-

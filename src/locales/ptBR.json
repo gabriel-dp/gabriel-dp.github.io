@@ -5,7 +5,8 @@
 		"projects": { "title": "Projetos", "subtitle": "Meus trabalhos", "subpage": "Alguns projetos do GitHub" },
 		"contact": { "title": "Contato", "subtitle": "Não seja tímido!" },
 		"education": { "title": "Educação", "subtitle": "Minha vida de estudante" },
-		"contests": { "title": "Competições", "subtitle": "Conquistas em equipe e individuais" }
+		"contests": { "title": "Competições", "subtitle": "Conquistas em equipe e individuais" },
+		"resume": { "title": "Currículo" }
 	},
 	"main": {
 		"professional": ["Desenvolvedor de Software", "Modelador 3D"]
@@ -84,7 +85,9 @@
 		"message": "Mensagem",
 		"send-button": "Enviar mensagem"
 	},
-
+	"resume": {
+		"external-button": "Clique aqui para abrir arquivo"
+	},
 	"footer": {
 		"made-by": "Feito com ♡ por",
 		"rights": "Todos os direitos reservados",

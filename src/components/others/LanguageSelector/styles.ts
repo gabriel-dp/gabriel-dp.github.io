@@ -24,7 +24,11 @@ export const DropdownLanguages = styled.ul<{ $isOpen: string }>`
 	list-style: none;
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-color: ${(props) => props.theme.primary}11;
+	background: linear-gradient(
+		to bottom,
+		${(props) => props.theme.background1} -75%,
+		${(props) => props.theme.background2} 175%
+	);
 	border: 1px solid ${(props) => props.theme.primary};
 	padding: ${(props) => (props.$isOpen == "true" ? "0.25rem " : 0)} 0.5rem;
 	max-height: ${(props) => (props.$isOpen == "true" ? "15rem" : 0)};

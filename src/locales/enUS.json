@@ -5,7 +5,8 @@
 		"projects": { "title": "Projects", "subtitle": "My works", "subpage": "Some projects from GitHub" },
 		"contact": { "title": "Contact", "subtitle": "Get in touch!" },
 		"education": { "title": "Education", "subtitle": "My student life" },
-		"contests": { "title": "Contests", "subtitle": "Team and individual achievements" }
+		"contests": { "title": "Contests", "subtitle": "Team and individual achievements" },
+		"resume": { "title": "Resume" }
 	},
 	"main": {
 		"professional": ["Software Developer", "3D Modeler"]
@@ -83,6 +84,9 @@
 		"subject": "Subject",
 		"message": "Message",
 		"send-button": "Send message"
+	},
+	"resume": {
+		"external-button": "Click here to open file"
 	},
 	"footer": {
 		"made-by": "Made with ♡ by",
