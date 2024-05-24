@@ -71,8 +71,12 @@ export default function Navbar(props: NavbarI) {
 										</NavbarButton>
 									</li>
 								))}
-								<ThemeSwitch />
-								<LanguageSelector />
+								<li>
+									<ThemeSwitch />
+								</li>
+								<li>
+									<LanguageSelector />
+								</li>
 							</NavbarList>
 						</NavbarNav>
 						<MenuButton onClick={handleMenuClick} aria-label="menu-button">
