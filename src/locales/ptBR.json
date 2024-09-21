@@ -5,6 +5,7 @@
 		"projects": { "title": "Projetos", "subtitle": "Meus trabalhos", "subpage": "Alguns projetos do GitHub" },
 		"contact": { "title": "Contato", "subtitle": "Não seja tímido!" },
 		"education": { "title": "Educação", "subtitle": "Minha vida de estudante" },
+		"experience": { "title": "Experiência", "subtitle": "Minhas experiências profissionais" },
 		"contests": { "title": "Competições", "subtitle": "Conquistas em equipe e individuais" },
 		"resume": { "title": "Currículo" }
 	},
@@ -16,6 +17,7 @@
 		"CS": "Ciência da Computação",
 		"local": { "city": "São João del Rei", "state": "MG", "country": "Brasil" },
 		"university": "UFSJ",
+		"job": { "company": "Exati", "role": "Estagiário" },
 		"resume-button": "Ver currículo",
 		"more-button": "Mais sobre mim",
 		"description": [
@@ -34,6 +36,20 @@
 				"institution": "Escola Sesi Anísio Teixeira",
 				"start": "2019",
 				"end": "2021"
+			}
+		],
+		"experiences": [
+			{
+				"name": "Estagiário Desenvolvimento FullStack",
+				"local": "Exati",
+				"start": "Setembro/2024",
+				"end": "Atual"
+			},
+			{
+				"name": "Estagiário Desenvolvimento Oracle APEX",
+				"local": "Tribunal de Contas da União",
+				"start": "Agosto/2024",
+				"end": "Setembro/2024"
 			}
 		],
 		"contests": [

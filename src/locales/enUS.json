@@ -5,6 +5,7 @@
 		"projects": { "title": "Projects", "subtitle": "My works", "subpage": "Some projects from GitHub" },
 		"contact": { "title": "Contact", "subtitle": "Get in touch!" },
 		"education": { "title": "Education", "subtitle": "My student life" },
+		"experience": { "title": "Experience", "subtitle": "My professional experiences" },
 		"contests": { "title": "Contests", "subtitle": "Team and individual achievements" },
 		"resume": { "title": "Resume" }
 	},
@@ -16,6 +17,7 @@
 		"CS": "Computer Science",
 		"local": { "city": "São João del Rei", "state": "MG", "country": "Brazil" },
 		"university": "UFSJ",
+		"job": { "company": "Exati", "role": "Intern" },
 		"resume-button": "View resume",
 		"more-button": "More about me",
 		"description": [
@@ -25,7 +27,7 @@
 		"educations": [
 			{
 				"name": "Computer Science",
-				"institution": "Federal University São João del Rei",
+				"institution": "Federal University of São João del Rei",
 				"start": "2022",
 				"end": "Now"
 			},
@@ -34,6 +36,20 @@
 				"institution": "Sesi School Anísio Teixeira",
 				"start": "2019",
 				"end": "2021"
+			}
+		],
+		"experiences": [
+			{
+				"name": "FullStack Development Intern",
+				"local": "Exati",
+				"start": "September/2024",
+				"end": "Now"
+			},
+			{
+				"name": "Oracle APEX Development Intern",
+				"local": "Tribunal de Contas da União",
+				"start": "August/2024",
+				"end": "September/2024"
 			}
 		],
 		"contests": [

@@ -1,7 +1,6 @@
 import SectionWrapper from "@/components/layout/SectionWrapper";
+import { TimeLine, TimeLineElement } from "@/components/others/TimeLine";
 import useLanguage from "@/contexts/language/useLanguage";
-
-import { EducationContainer, EducationPath, SingleEducation, VerticalLine } from "./styles";
 
 interface EducationI {
 	name: string;
@@ -16,20 +15,17 @@ export default function AboutEducation() {
 
 	return (
 		<SectionWrapper $id="education" title={t`sections.education.title`} sub={t`sections.education.subtitle`}>
-			<EducationContainer>
-				<VerticalLine />
-				<EducationPath>
-					{educations.map((education) => (
-						<SingleEducation key={education.name}>
-							<h4 className="name">{education.name}</h4>
-							<p>{education.institution}</p>
-							<p>
-								{education.start} - {education.end}
-							</p>
-						</SingleEducation>
-					))}
-				</EducationPath>
-			</EducationContainer>
+			<TimeLine>
+				{educations.map((education) => (
+					<TimeLineElement key={education.name}>
+						<h4 className="name">{education.name}</h4>
+						<p>{education.institution}</p>
+						<p>
+							{education.start} - {education.end}
+						</p>
+					</TimeLineElement>
+				))}
+			</TimeLine>
 		</SectionWrapper>
 	);
 }

@@ -1,4 +1,11 @@
-import { FaHourglassHalf, FaMapMarkerAlt, FaGraduationCap, FaFile, FaArrowRight } from "react-icons/fa";
+import {
+	FaHourglassHalf as AgeIcon,
+	FaMapMarkerAlt as LocationIcon,
+	FaGraduationCap as GraduationIcon,
+	FaSuitcase as JobIcon,
+	FaFile as FileIcon,
+	FaArrowRight as NextIcon,
+} from "react-icons/fa";
 
 import { Page } from "@/pages";
 import aboutConfigs from "@/configs/about.json";
@@ -23,28 +30,33 @@ export default function HomeAbout(props: { $id: string }) {
 					<div className="details">
 						<h3 className="title">Gabriel de Paula Meira</h3>
 						<p>
-							<FaHourglassHalf className="icon" />
+							<AgeIcon className="icon" />
 							<span>
 								{calculateAge(new Date(aboutConfigs.birthdate))} {t`about.y/o`}
 							</span>
 						</p>
 						<p>
-							<FaGraduationCap className="icon" />
+							<GraduationIcon className="icon" />
 							<span>{t`about.CS`}</span>
 							<span>({t`about.university`})</span>
 						</p>
 						<p>
-							<FaMapMarkerAlt className="icon" />
+							<LocationIcon className="icon" />
 							<span>{t`about.local.city`},</span>
 							<span>
 								{t`about.local.state`} / {t`about.local.country`}
 							</span>
 						</p>
+						<p>
+							<JobIcon className="icon" />
+							<span>{t`about.job.company`}</span>
+							<span>({t`about.job.role`})</span>
+						</p>
 					</div>
 					<ResumeButton>
 						<LinkComponentRouter to={Page.Resume} top>
 							<span>{t`about.resume-button`}</span>
-							<FaFile className="icon" />
+							<FileIcon className="icon" />
 						</LinkComponentRouter>
 					</ResumeButton>
 				</DataContainer>
@@ -52,7 +64,7 @@ export default function HomeAbout(props: { $id: string }) {
 			<MoreAboutButton>
 				<LinkComponentRouter to={Page.About} top>
 					<span>{t`about.more-button`}</span>
-					<FaArrowRight className="icon" />
+					<NextIcon className="icon" />
 				</LinkComponentRouter>
 			</MoreAboutButton>
 		</SectionWrapper>
