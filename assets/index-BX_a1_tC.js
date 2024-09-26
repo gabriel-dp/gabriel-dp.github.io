@@ -1519,7 +1519,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 	.time {
 		opacity: 0.8;
 	}
-`;function V9(){const e=nt(),t=e("about.experiences",{returnObjects:!0});return y.jsx(Qt,{$id:"experience",title:e`sections.experience.title`,sub:e`sections.experience.subtitle`,children:y.jsx(_m,{children:t.map(n=>y.jsx(bm,{children:y.jsxs(H9,{children:[y.jsx("h4",{className:"name",children:n.name}),y.jsx("p",{className:"local",children:n.local}),y.jsxs("p",{className:"time",children:[n.start," - ",n.end]})]})},n.name))})})}function U9(){return y.jsxs(So,{children:[y.jsx(xo,{}),y.jsx(w9,{}),y.jsx(V9,{}),y.jsx(b9,{}),y.jsx(B9,{}),y.jsx(Xc,{})]})}const W9="/assets/resume-en-US-rtrqauTz.pdf",Q9="/assets/resume-pt-BR-BCLh1wX2.pdf",K9={"resume-en-US":W9,"resume-pt-BR":Q9},G9=H.object`
+`;function V9(){const e=nt(),t=e("about.experiences",{returnObjects:!0});return y.jsx(Qt,{$id:"experience",title:e`sections.experience.title`,sub:e`sections.experience.subtitle`,children:y.jsx(_m,{children:t.map(n=>y.jsx(bm,{children:y.jsxs(H9,{children:[y.jsx("h4",{className:"name",children:n.name}),y.jsx("p",{className:"local",children:n.local}),y.jsxs("p",{className:"time",children:[n.start," - ",n.end]})]})},n.name))})})}function U9(){return y.jsxs(So,{children:[y.jsx(xo,{}),y.jsx(w9,{}),y.jsx(V9,{}),y.jsx(b9,{}),y.jsx(B9,{}),y.jsx(Xc,{})]})}const W9="/assets/resume-en-US-CnhdNl-u.pdf",Q9="/assets/resume-pt-BR-CVocOcm8.pdf",K9={"resume-en-US":W9,"resume-pt-BR":Q9},G9=H.object`
 	height: 75svh;
 	width: calc(100% - 2rem);
 	border: none;
