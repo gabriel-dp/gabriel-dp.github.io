@@ -918,6 +918,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		animation: ${_7} 0.25s ease-in-out;
 	}
 `,j7=H.summary`
+	width: 100%;
 	padding: 0.5rem;
 	list-style: none;
 	cursor: pointer;
