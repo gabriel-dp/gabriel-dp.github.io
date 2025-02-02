@@ -31,6 +31,7 @@ export const CategoryContainer = styled.details`
 `;
 
 export const CategoryHeader = styled.summary`
+	width: 100%;
 	padding: 0.5rem;
 	list-style: none;
 	cursor: pointer;
